@@ -10,6 +10,31 @@
 
 @implementation QuizAppDelegate
 
+- (id)init
+{
+    // call the init method implemented by superclass
+    self = [super init];
+    if (self) {
+        //create 2 arrays and make the pointer point to the right objects
+        questions = [[NSMutableArray alloc] init];
+        answers = [[NSMutableArray alloc] init];
+        
+        // add questions and answers to the arrays
+        
+        [questions addObject:@"what is 7 + 7?"];
+        [answers addObject:@"14"];
+        
+        [questions addObject:@"What's the capitoal of Vermont?"];
+        [answers addObject:@"Montpelier"];
+        
+        [questions addObject:@"From what is cognac made?"];
+        [answers addObject:@"Grapes"];
+        
+    }
+    
+    return self;
+}
+
 
 @synthesize window=_window;
 
