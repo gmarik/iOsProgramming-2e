@@ -31,10 +31,41 @@
         [answers addObject:@"Grapes"];
         
     }
-    
+    // Return th
     return self;
 }
 
+- (IBAction)showQuestion:(id)sender
+{
+    //step to the next question
+    currentQuestionIndex += 1;
+    
+    if (currentQuestionIndex == [questions count]) {
+        //start from beginning
+        currentQuestionIndex = 0;
+    }
+    // get the question string
+    
+    NSString *question = [questions objectAtIndex:currentQuestionIndex];
+    // log the string to the console
+    
+    NSLog(@"displaying question: %@", question);
+    
+    // display the question
+    [questionField setText:question];
+    // reset answer field
+    [answerField setText: @"???"];
+    
+}
+
+- (IBAction)showAnswer:(id)sender
+{
+    // What is the answer to the current question?
+    NSString *answer = [answers objectAtIndex:currentQuestionIndex];
+    
+    // display answer
+    [answerField setText:answer];
+}
 
 @synthesize window=_window;
 
