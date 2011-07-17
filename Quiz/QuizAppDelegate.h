@@ -9,9 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @interface QuizAppDelegate : NSObject <UIApplicationDelegate> {
+    int currentQuestionIndex;
+    
+    // main model objects
+    NSMutableArray *questions;
+    NSMutableArray *answers;
+    
+    //
+    
+    IBOutlet UILabel *questionField;
+    IBOutlet UILabel *answerField;
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+- (IBAction)showQuestion:(id)sender;
+- (IBAction)showAnswer:(id)sender;
 
 @end
