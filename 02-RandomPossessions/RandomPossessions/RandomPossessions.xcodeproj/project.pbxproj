@@ -27,7 +27,7 @@
 		62812DB313D541C6003956E1 /* RandomPossessions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomPossessions; sourceTree = BUILT_PRODUCTS_DIR; };
 		62812DB713D541C6003956E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		62812DBA13D541C6003956E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		62812DBD13D541C6003956E1 /* RandomPossessions-Prefix.pch */ = {isa = PBXFileReference; path = "RandomPossessions-Prefix.pch"; sourceTree = "<group>"; };
+		62812DBD13D541C6003956E1 /* RandomPossessions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomPossessions-Prefix.pch"; sourceTree = "<group>"; };
 		62812DBE13D541C6003956E1 /* RandomPossessions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomPossessions.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
