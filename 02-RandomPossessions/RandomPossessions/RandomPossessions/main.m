@@ -41,3 +41,24 @@ int main (int argc, const char * argv[])
     return 0;
 }
 
+void strings()
+{
+    // literal style
+    NSUInteger len = [@"Hello World" length];
+    
+    // object style
+    NSString *hw = @"Hello World";
+    len = [hw length];
+    
+    // object style with constructor
+    len = [[[NSString alloc] initWithString:@"Hello World"] length];
+    
+    NSLog(@"%lu", len);
+}
+
+void formatting()
+{
+    // formatting in Objective-C
+    // same as fprintf + %@ formatter
+    NSLog(@"Integer %d, Float: %f, Char: %c, to_s: %@", 1, 1.0, 'c', @"Description");
+}
