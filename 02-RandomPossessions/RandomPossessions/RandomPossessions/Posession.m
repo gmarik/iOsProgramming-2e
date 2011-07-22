@@ -11,10 +11,12 @@
 
 @implementation Posession
 
+// initializers return (id) by convenience
 - (id)init {
     return [self initWithName:@"Posession" valueInDollars:0 serialNumber:@""];
 }
 
+// initializers return (id) by convenience
 - (id)initWithName:(NSString *)name 
     valueInDollars:(int) value
        serialNumber:(NSString *)num {
