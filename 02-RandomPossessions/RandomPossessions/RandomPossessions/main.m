@@ -49,6 +49,12 @@ int main (int argc, const char * argv[])
     // sending messages to nil is isgnored
     // sending messages to "released object" causes issues 
 
+    
+    for(int i = 0; i < 10; i+=1) {
+        NSLog(@"%@",[Posession randomPosession]);        
+    }
+
+    
     [pool drain];
     return 0;
 }
