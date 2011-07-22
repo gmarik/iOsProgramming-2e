@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "Posession.h"
 #import <Foundation/Foundation.h>
 
 int main (int argc, const char * argv[])
@@ -29,6 +30,9 @@ int main (int argc, const char * argv[])
         // which is kind of Object#to_s or Object#inspect in Ruby
 
     }
+
+    Posession *p = [[Posession alloc] init];
+    NSLog(@"%@ %@ %@ %d", [p posessionName],[p dateCreated], [p serialNumber], [p valueInDollars]);
     
     //release
     [items release];
