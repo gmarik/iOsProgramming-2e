@@ -11,11 +11,15 @@
 
 @implementation Posession
 
+- (id)init {
+    return [self initWithName:@"Posession" valueInDollars:0 serialNumber:@""];
+}
+
 - (id)initWithName:(NSString *)name 
     valueInDollars:(int) value
        serialNumber:(NSString *)num {
-
-    // [self init] could be translated into
+    // we can't call [self init] anymore 
+    // as it uses this method now
     self = [super init];
     
     if (!self) return self;
