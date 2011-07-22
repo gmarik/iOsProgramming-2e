@@ -40,15 +40,14 @@ int main (int argc, const char * argv[])
     
     Posession *p = [[Posession alloc] initWithName:@"Red Sofa" valueInDollars:100 serialNumber:@"R3C1B1"];
     Posession *p2 = [[Posession alloc] init];
-    //    [p setDateCreated::10];
-    // Red Sofa (R3C1B1): Worth $100, recorded 2011-07-21 22:37:53 -0500
+    // Logs: Red Sofa (R3C1B1): Worth $100, recorded 2011-07-21 22:37:53 -0500
     NSLog(@"%@", p);
-    // Logs Posession (): Worth $0, recorded 2011-07-21 22:37:53 -0500
+    // Logs: Posession (): Worth $0, recorded 2011-07-21 22:37:53 -0500
     NSLog(@"%@", p2);
     
     
     
-    // Use classmethod
+    // Use class method
     for(int i = 0; i < 10; i+=1) {
         NSLog(@"%@",[Posession randomPosession]);        
     }
