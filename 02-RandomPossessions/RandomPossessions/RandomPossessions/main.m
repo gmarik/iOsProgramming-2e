@@ -36,7 +36,7 @@ int main (int argc, const char * argv[])
     [p setSerialNumber:@"R3C1B1"];
     [p setValueInDollars:100];
 //    [p setDateCreated::10];
-    NSLog(@"%@ %@ %@ %d", [p posessionName],[p dateCreated], [p serialNumber], [p valueInDollars]);
+    NSLog(@"%@", p);
     
     //release
     [items release];

@@ -39,4 +39,11 @@
     valueInDollars = newValue;
 }
 
+// Override Posession description
+// ala to_s in Ruby
+- (NSString *)description {
+    NSString *desc = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded %@", posessionName, serialNumber, valueInDollars, dateCreated];
+    return desc;
+}
+
 @end
