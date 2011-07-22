@@ -17,9 +17,10 @@
 
     [self init];
     
-    posessionName = name;
-    valueInDollars = value;
-    serialNumber = num;
+    [self setPosessionName:name];
+    [self setValueInDollars:value];
+    [self setSerialNumber:num];
+    [self setDateCreated:[[NSDate alloc] init]];
     
     return self;
 }
