@@ -15,7 +15,10 @@
     valueInDollars:(int) value
        serialNumber:(NSString *)num {
 
-    [self init];
+    // [self init] could be translated into
+    self = [super init];
+    
+    if (!self) return self;
     
     [self setPosessionName:name];
     [self setValueInDollars:value];
