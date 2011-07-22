@@ -29,6 +29,12 @@ int main (int argc, const char * argv[])
         // NSLog(@"%s", [[items objectAtIndex:i] description]);
         // which is kind of Object#to_s or Object#inspect in Ruby
     }
+    
+    // or using enumeration-style for loop
+    for(NSString *item in items) {
+        NSLog(@"%@", item);
+    }
+    
     //release
     [items release];
     // Don't leave items pointint at freed memory!
