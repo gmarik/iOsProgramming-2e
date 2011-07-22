@@ -34,6 +34,10 @@
     return self;
 }
 
+// Getters/Setters follow naming convention
+// setter: (void)setPropertyName
+// getter: propertyName
+
 - (NSString *)posessionName {
     return posessionName;
 }
