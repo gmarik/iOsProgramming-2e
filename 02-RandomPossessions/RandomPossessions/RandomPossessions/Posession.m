@@ -11,6 +11,19 @@
 
 @implementation Posession
 
+- (id)initWithName:(NSString *)name 
+    valueInDollars:(int) value
+       serialNumber:(NSString *)num {
+
+    [self init];
+    
+    posessionName = name;
+    valueInDollars = value;
+    serialNumber = num;
+    
+    return self;
+}
+
 - (NSString *)posessionName {
     return posessionName;
 }

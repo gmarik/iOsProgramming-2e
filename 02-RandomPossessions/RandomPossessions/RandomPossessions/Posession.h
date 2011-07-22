@@ -18,6 +18,10 @@
     
 }
 
+- (id)initWithName:(NSString *)name 
+    valueInDollars:(int) value
+       serialNumber:(NSString *)num;
+
 -(NSString *)posessionName;
 -(void)setPosessionName:(NSString *)newValue;
 

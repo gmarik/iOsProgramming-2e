@@ -31,10 +31,8 @@ int main (int argc, const char * argv[])
 
     }
 
-    Posession *p = [[Posession alloc] init];
-    [p setPosessionName:@"Red Sofa"];
-    [p setSerialNumber:@"R3C1B1"];
-    [p setValueInDollars:100];
+    Posession *p = [[Posession alloc] initWithName:@"Red Sofa" valueInDollars:100 serialNumber:@"R3C1B1"];
+    
 //    [p setDateCreated::10];
     NSLog(@"%@", p);
     
