@@ -40,8 +40,8 @@
 
 // For more details see "Declared properties" help
 
-@property (nonatomic,retain) NSString *posessionName;
-@property (nonatomic,retain) NSString *serialNumber;
+@property (nonatomic,copy) NSString *posessionName;
+@property (nonatomic,copy) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly) NSDate *dateCreated;
 
