@@ -10,11 +10,6 @@
 
 
 @interface Posession : NSObject {
-
-    NSString *posessionName;
-    NSString *serialNumber;
-    int valueInDollars;
-    NSDate *dateCreated;
     
 }
 
