@@ -65,7 +65,8 @@
     [self setPosessionName:name];
     [self setValueInDollars:value];
     [self setSerialNumber:num];
-    [self setDateCreated:[[NSDate alloc] init]];
+    
+    dateCreated = [[NSDate alloc] init];
     
     return self;
 }
@@ -95,12 +96,7 @@
 - (NSDate *)dateCreated {
     return dateCreated;
 }
-- (void)setDateCreated:(NSDate *)newValue {
-    [newValue retain];
-    [dateCreated release];
 
-    dateCreated = newValue;
-}
 
 - (int)valueInDollars {
     return valueInDollars;
