@@ -21,7 +21,24 @@
 
 // default attributes of properties:
 // atomic, readwrite, assign
-// 
+
+// Naming:
+// getter=getterName
+// setter=setterName
+
+// Semantics:
+// assign -
+// copy - assigns newValue's copy, releases previousOne; useful for mutable objects
+// retain - retain newValue and releases previousOne
+
+// Writability
+// readwrite - generates both getter and setter
+// readonly - generates only getter
+
+// Atomicity
+// nonatomic - do not synchronize access to instance variables in threaded env
+
+// For more details see "Declared properties" help
 
 @property (nonatomic,retain) NSString *posessionName;
 @property (nonatomic,retain) NSString *serialNumber;
