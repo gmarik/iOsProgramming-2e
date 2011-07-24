@@ -26,6 +26,9 @@ int main (int argc, const char * argv[])
         NSLog(@"%@", item);
     }
     
+    // we coul'd release items here manually looping through the items array
+    // but that's too expensive
+    
     //release
     [items release];
     items = nil;

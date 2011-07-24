@@ -37,6 +37,8 @@
                                valueInDollars:randomValue
                                  serialNumber:randomSerial];
     
+    // we can't release objects here cuz it'd be a premature deallocation
+    
     return p;
                         
 }
