@@ -11,6 +11,8 @@
 
 @implementation Posession
 
+@synthesize posessionName,serialNumber,valueInDollars,dateCreated;
+
 + (id)randomPosession {
 
     NSArray *adjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
