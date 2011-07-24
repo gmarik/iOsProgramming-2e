@@ -15,6 +15,9 @@ int main (int argc, const char * argv[])
 
     // allocate and init items
     NSMutableArray *items = [[NSMutableArray alloc] init];
+
+    // autorelease returns the instance so can be nested in init chains 
+    //[items addObject:[[Posession randomPosession] autorelease]];
     
     [items addObject:[Posession randomPosession]];
     [items addObject:[Posession randomPosession]];

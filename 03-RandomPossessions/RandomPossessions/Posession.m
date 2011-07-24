@@ -37,9 +37,13 @@
                                valueInDollars:randomValue
                                  serialNumber:randomSerial];
     
-    // we can't release objects here cuz it'd be a premature deallocation
-    
-    return p;
+    // we can't release objects here cuz it'd be a premature deallocation    
+    //instead send autorelease msg
+    // so object is autoreleased when object pool is drained
+    // in case no pool created
+    // warnings are logged:
+    // RandomPossessions[57731:903] *** __NSAutoreleaseNoPool(): Object 0x100111020 of class Posession autoreleased with no pool in place - just leaking
+    return [p autorelease];
                         
 }
 
@@ -102,7 +106,7 @@
 // ala to_s in Ruby
 - (NSString *)description {
     NSString *desc = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded %@", posessionName, serialNumber, valueInDollars, dateCreated];
-    return desc;
+    return [desc autorelease];
 }
 
 @end
