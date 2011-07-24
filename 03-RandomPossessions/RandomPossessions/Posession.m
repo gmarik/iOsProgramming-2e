@@ -78,6 +78,8 @@
     return posessionName;
 }
 -(void)setPosessionName:(NSString *)newValue {
+    [newValue retain];
+    [posessionName release];
     posessionName = newValue;
 }
 
@@ -85,6 +87,8 @@
     return serialNumber;
 }
 - (void)setSerialNumber:(NSString *)newValue {
+    [newValue retain];
+    [serialNumber release];
     serialNumber = newValue;
 }
 
@@ -92,6 +96,9 @@
     return dateCreated;
 }
 - (void)setDateCreated:(NSDate *)newValue {
+    [newValue retain];
+    [dateCreated release];
+
     dateCreated = newValue;
 }
 
