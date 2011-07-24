@@ -24,10 +24,14 @@
     valueInDollars:(int) value
        serialNumber:(NSString *)num;
 
-@property NSString *posessionName;
-@property NSString *serialNumber;
-@property int valueInDollars;
-@property NSDate *dateCreated;
+// default attributes of properties:
+// atomic, readwrite, assign
+// 
+
+@property (nonatomic,retain) NSString *posessionName;
+@property (nonatomic,retain) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic, readonly) NSDate *dateCreated;
 
 -(void)dealloc;
 
