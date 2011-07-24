@@ -24,16 +24,11 @@
     valueInDollars:(int) value
        serialNumber:(NSString *)num;
 
--(NSString *)posessionName;
--(void)setPosessionName:(NSString *)newValue;
+@property NSString *posessionName;
+@property NSString *serialNumber;
+@property int valueInDollars;
+@property NSDate *dateCreated;
 
--(NSString *) serialNumber;
--(void)setSerialNumber:(NSString *)newValue;
-
--(NSDate *) dateCreated;
--(void)setDateCreated:(NSDate *)newValue;
-
--(int) valueInDollars;
--(void)setValueInDollars:(int)newValue;
+-(void)dealloc;
 
 @end

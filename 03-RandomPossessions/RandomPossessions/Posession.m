@@ -71,45 +71,18 @@
     return self;
 }
 
-// Getters/Setters follow naming convention
-// setter: (void)setPropertyName
-// getter: propertyName
-
-- (NSString *)posessionName {
-    return posessionName;
-}
--(void)setPosessionName:(NSString *)newValue {
-    [newValue retain];
-    [posessionName release];
-    posessionName = newValue;
-}
-
-- (NSString *)serialNumber {
-    return serialNumber;
-}
-- (void)setSerialNumber:(NSString *)newValue {
-    [newValue retain];
-    [serialNumber release];
-    serialNumber = newValue;
-}
-
-- (NSDate *)dateCreated {
-    return dateCreated;
-}
-
-
-- (int)valueInDollars {
-    return valueInDollars;
-}
-- (void)setValueInDollars:(int)newValue {
-    valueInDollars = newValue;
-}
-
 // Override Posession description
 // ala to_s in Ruby
 - (NSString *)description {
     NSString *desc = [NSString stringWithFormat:@"%@ (%@): Worth $%d, recorded %@", posessionName, serialNumber, valueInDollars, dateCreated];
     return desc;
+}
+
+-(void)dealloc {
+    [posessionName release];
+    [serialNumber release];
+    [dateCreated release];
+    [super dealloc];
 }
 
 @end
