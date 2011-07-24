@@ -13,6 +13,9 @@
 
 @synthesize posessionName,serialNumber,valueInDollars,dateCreated;
 
+// format: accessorName = instanceVariableName
+@synthesize accessor = iVarName;
+
 + (id)randomPosession {
 
     NSArray *adjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
@@ -68,6 +71,8 @@
     [self setValueInDollars:value];
     [self setSerialNumber:num];
     
+    [self setAccessor:@"an accessor"];
+    
     dateCreated = [[NSDate alloc] init];
     
     return self;
@@ -76,7 +81,7 @@
 // Override Posession description
 // ala to_s in Ruby
 - (NSString *)description {
-    NSString *desc = [NSString stringWithFormat:@"%@ (%@): Worth $%d, recorded %@", posessionName, serialNumber, valueInDollars, dateCreated];
+    NSString *desc = [NSString stringWithFormat:@"%@ (%@): Worth $%d, recorded %@, %@", posessionName, serialNumber, valueInDollars, dateCreated, iVarName];
     return desc;
 }
 

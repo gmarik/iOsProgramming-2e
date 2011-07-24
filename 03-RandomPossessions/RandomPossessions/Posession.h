@@ -28,6 +28,8 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly) NSDate *dateCreated;
 
+@property (nonatomic,retain) NSString *accessor;
+
 -(void)dealloc;
 
 @end
