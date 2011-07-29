@@ -13,15 +13,14 @@
 
 @synthesize window=_window;
 
-- (void)locationManger:(CLLocationManager *)manager 
-   didUpdateToLocation:(CLLocation *)newLocation 
-          fromLocation:(CLLocation *)oldLocation
-{
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation{
     NSLog(@"%@", newLocation);
 }
 
-- (void)locationManger:(CLLocationManager *)manager 
-     didFailWithError:(NSError *)error {
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
     NSLog(@"%@", error);
 }
 
