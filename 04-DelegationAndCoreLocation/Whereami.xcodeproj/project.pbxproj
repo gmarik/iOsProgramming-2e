@@ -14,6 +14,7 @@
 		62B87B9F13E125590053D545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B87B9E13E125590053D545 /* main.m */; };
 		62B87BA213E125590053D545 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B87BA113E125590053D545 /* WhereamiAppDelegate.m */; };
 		62B87BA513E125590053D545 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B87BA313E125590053D545 /* MainWindow.xib */; };
+		62B87BB513E127B30053D545 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B87BB413E127B30053D545 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		62B87BA013E125590053D545 /* WhereamiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiAppDelegate.h; sourceTree = "<group>"; };
 		62B87BA113E125590053D545 /* WhereamiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiAppDelegate.m; sourceTree = "<group>"; };
 		62B87BA413E125590053D545 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		62B87BB413E127B30053D545 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B87BB513E127B30053D545 /* CoreLocation.framework in Frameworks */,
 				62B87B9213E125590053D545 /* UIKit.framework in Frameworks */,
 				62B87B9413E125590053D545 /* Foundation.framework in Frameworks */,
 				62B87B9613E125590053D545 /* CoreGraphics.framework in Frameworks */,
@@ -47,6 +50,7 @@
 		62B87B8213E125590053D545 = {
 			isa = PBXGroup;
 			children = (
+				62B87BB413E127B30053D545 /* CoreLocation.framework */,
 				62B87B9713E125590053D545 /* Whereami */,
 				62B87B9013E125590053D545 /* Frameworks */,
 				62B87B8E13E125590053D545 /* Products */,
@@ -221,6 +225,7 @@
 				GCC_PREFIX_HEADER = "Whereami/Whereami-Prefix.pch";
 				INFOPLIST_FILE = "Whereami/Whereami-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -234,6 +239,7 @@
 				GCC_PREFIX_HEADER = "Whereami/Whereami-Prefix.pch";
 				INFOPLIST_FILE = "Whereami/Whereami-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -258,6 +264,7 @@
 				62B87BAA13E125590053D545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
