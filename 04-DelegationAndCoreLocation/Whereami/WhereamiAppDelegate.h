@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate> {
+// Angle brackets<UIApplicationDelegate, CLLocationManagerDelegate> here list what protocols AppDelegate conforms to 
+@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate> {
 
     CLLocationManager *locationManager;
     
