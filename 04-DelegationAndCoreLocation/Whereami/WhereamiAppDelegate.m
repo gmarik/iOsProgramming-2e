@@ -15,6 +15,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // create init
+    locationManager = [[CLLocationManager alloc] init];
+    // and setup location manager
+    [locationManager setDistanceFilter  :kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy :kCLLocationAccuracyBest];    
+
+    // tell location manager to start looking up the location now
+    [locationManager startUpdatingLocation];
+    
+    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
