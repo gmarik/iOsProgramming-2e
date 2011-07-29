@@ -13,10 +13,31 @@
 
 @synthesize window=_window;
 
+- (void)locationManger:(CLLocationManager *)manager 
+   didUpdateToLocation:(CLLocation *)newLocation 
+          fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManger:(CLLocationManager *)manager 
+     didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // create init
     locationManager = [[CLLocationManager alloc] init];
+    
+    // set the delegate to receive updates
+    // delegate is an object-oriented analogy for callbacks
+    // since OO aproach deals with objects
+    // an object(the delegate) has to be set responsible to receive messages(callbacks)
+    // usually delegate is used to respond for more than one message
+    // TODO: describe all Cocoa design-patterns
+    [locationManager setDelegate: self];
+    
     // and setup location manager
     [locationManager setDistanceFilter  :kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy :kCLLocationAccuracyBest];    
