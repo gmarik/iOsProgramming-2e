@@ -24,8 +24,20 @@
     NSLog(@"%@", error);
 }
 
+// RunTime warning for declared but non-implemented method:
+// Whereami[8415:207] -[WhereamiAppDelegate doSmthWeird]: unrecognized selector sent to instance 0x4e16120
+//- (void)doSmthWeird {
+//    NSLog(@"Debugger test 1");
+//    NSLog(@"Debugger test 2");
+//    NSLog(@"Debugger test 3");
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // code for playing with debugger
+    // [self doSmthWeird];
+    
     // create init
     locationManager = [[CLLocationManager alloc] init];
     
