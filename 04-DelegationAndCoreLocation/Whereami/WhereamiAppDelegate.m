@@ -91,6 +91,21 @@
 
 - (void)dealloc
 {
+    // delegates usually do not get retained as they're not owned
+    // if locationManger decides to retain its delegate (which is AppDelegate)
+    // it will cause Retain Cycle 
+    // (as AppDelegate owns locationManger)
+    // leading to deallocation failure of both instances
+    // that's why properties are declared without retain/copy attr, ie: @property (nonatomic, assign)  
+
+    // Above makes delegate responsible for manual release management of its instance variables, ie
+    // remove the delegate on location manager in case AppDelegate is still a delegate
+    if ([locationManager delegate] == self)
+        [locationManager setDelegate:nil];
+
+    // and release location manager instance, as we own it
+    [locationManager release];
+
     [_window release];
     [super dealloc];
 }
