@@ -24,6 +24,11 @@
     NSLog(@"%@", error);
 }
 
+- (void)locationManager:(CLLocationManager *)manager
+       didUpdateHeading:(CLHeading *)newHeading {
+    NSLog(@"%@", newHeading);
+}
+
 // RunTime warning for declared but non-implemented method:
 // Whereami[8415:207] -[WhereamiAppDelegate doSmthWeird]: unrecognized selector sent to instance 0x4e16120
 //- (void)doSmthWeird {
@@ -56,6 +61,14 @@
     // tell location manager to start looking up the location now
     [locationManager startUpdatingLocation];
     
+    // 
+    if ([CLLocationManager headingAvailable]) {
+        //this setting is default
+        //[locationManager setHeadingFilter:kCLHeadingFilterNone];
+        [locationManager startUpdatingHeading];
+    } else {
+        NSLog(@"Heading service isn't available on this device");
+    }
     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
