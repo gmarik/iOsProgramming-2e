@@ -18,6 +18,16 @@
     NSLog(@"%@ : %@", mapView, views);
 }
 
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    NSLog(@"%@", userLocation);
+    
+    MKCoordinateRegion region;
+    region.center = userLocation.coordinate;
+    MKCoordinateSpan span = {0.4, 0.4};
+    region.span = span;    
+    [mapView setRegion:region animated:true];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
