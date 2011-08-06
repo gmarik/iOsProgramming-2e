@@ -44,10 +44,11 @@
     [locationManager setDistanceFilter  :kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy :kCLLocationAccuracyBest];    
 
-    [locationManager startUpdatingLocation];
+    //[locationManager startUpdatingLocation];
     
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
+    [worldView setShowsUserLocation:YES];
         
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
