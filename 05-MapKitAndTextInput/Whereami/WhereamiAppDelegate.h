@@ -13,8 +13,9 @@
 @interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
 
     CLLocationManager *locationManager;
-    // pointer to view instance displaying Map 
-    MKMapView *worldView;
+    MKMapView *worldView;  // pointer to view instance displaying Map 
+    UIActivityIndicatorView *activityIndicatorView;
+    UITextField *locationTitleField;
     
 }
 

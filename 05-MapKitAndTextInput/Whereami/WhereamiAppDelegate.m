@@ -50,7 +50,7 @@
     worldView = [[MKMapView alloc] init];
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
-    
+        
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
