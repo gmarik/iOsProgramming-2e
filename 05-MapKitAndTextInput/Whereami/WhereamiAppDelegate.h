@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
+@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, MKMapViewDelegate> {
 
-    CLLocationManager *locationManager;
+
     IBOutlet MKMapView *worldView;  // pointer to view instance displaying Map 
     IBOutlet UIActivityIndicatorView *activityIndicatorView;
     IBOutlet UITextField *locationTitleField;
