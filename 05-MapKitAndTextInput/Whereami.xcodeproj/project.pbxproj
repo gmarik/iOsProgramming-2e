@@ -15,6 +15,7 @@
 		62B87BA213E125590053D545 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B87BA113E125590053D545 /* WhereamiAppDelegate.m */; };
 		62B87BA513E125590053D545 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B87BA313E125590053D545 /* MainWindow.xib */; };
 		62B87BB513E127B30053D545 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B87BB413E127B30053D545 /* CoreLocation.framework */; };
+		62E4CC7F13EDCDA0003D9528 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E4CC7E13EDCD9F003D9528 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		62B87BA113E125590053D545 /* WhereamiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiAppDelegate.m; sourceTree = "<group>"; };
 		62B87BA413E125590053D545 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		62B87BB413E127B30053D545 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		62E4CC7E13EDCD9F003D9528 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E4CC7F13EDCDA0003D9528 /* MapKit.framework in Frameworks */,
 				62B87BB513E127B30053D545 /* CoreLocation.framework in Frameworks */,
 				62B87B9213E125590053D545 /* UIKit.framework in Frameworks */,
 				62B87B9413E125590053D545 /* Foundation.framework in Frameworks */,
@@ -50,6 +53,7 @@
 		62B87B8213E125590053D545 = {
 			isa = PBXGroup;
 			children = (
+				62E4CC7E13EDCD9F003D9528 /* MapKit.framework */,
 				62B87BB413E127B30053D545 /* CoreLocation.framework */,
 				62B87B9713E125590053D545 /* Whereami */,
 				62B87B9013E125590053D545 /* Frameworks */,

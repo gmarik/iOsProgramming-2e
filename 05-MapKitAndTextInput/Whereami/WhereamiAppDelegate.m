@@ -29,6 +29,11 @@
     NSLog(@"%@", newHeading);
 }
 
+// handle additions of Annotation(s) sent by MapView instance
+-(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
+    NSLog(@"%@ : %@", mapView, views);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -40,6 +45,11 @@
     [locationManager setDesiredAccuracy :kCLLocationAccuracyBest];    
 
     [locationManager startUpdatingLocation];
+    
+    // allocation
+    worldView = [[MKMapView alloc] init];
+    // App is a delegate and handles messages from MapView
+    [worldView setDelegate:self];
     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
