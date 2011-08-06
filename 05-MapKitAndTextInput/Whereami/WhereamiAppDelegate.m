@@ -46,8 +46,6 @@
 
     [locationManager startUpdatingLocation];
     
-    // allocation
-    worldView = [[MKMapView alloc] init];
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
         
