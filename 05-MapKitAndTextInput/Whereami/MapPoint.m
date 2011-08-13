@@ -23,4 +23,13 @@
     
     return self;
 }
+
+-(void)dealloc {
+    
+    // NOTE: coordinate isn't an Objective-C object so doesn't receive messages
+    // the CLLocationCoordinate2D structure will be stored in memory inside each instance
+    // of MapPoint and will be created/destroyed automatically along with the object
+    [title release];
+    [super dealloc];
+}
 @end
