@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62B09F7D13F7052B001E7C3E /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B09F7C13F7052B001E7C3E /* MapPoint.m */; };
 		62B87B9213E125590053D545 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B87B9113E125590053D545 /* UIKit.framework */; };
 		62B87B9413E125590053D545 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B87B9313E125590053D545 /* Foundation.framework */; };
 		62B87B9613E125590053D545 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B87B9513E125590053D545 /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62B09F7B13F7052B001E7C3E /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		62B09F7C13F7052B001E7C3E /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		62B87B8D13E125590053D545 /* Whereami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B87B9113E125590053D545 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		62B87B9313E125590053D545 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +87,8 @@
 			children = (
 				62B87BA013E125590053D545 /* WhereamiAppDelegate.h */,
 				62B87BA113E125590053D545 /* WhereamiAppDelegate.m */,
+				62B09F7B13F7052B001E7C3E /* MapPoint.h */,
+				62B09F7C13F7052B001E7C3E /* MapPoint.m */,
 				62B87BA313E125590053D545 /* MainWindow.xib */,
 				62B87B9813E125590053D545 /* Supporting Files */,
 			);
@@ -162,6 +167,7 @@
 			files = (
 				62B87B9F13E125590053D545 /* main.m in Sources */,
 				62B87BA213E125590053D545 /* WhereamiAppDelegate.m in Sources */,
+				62B09F7D13F7052B001E7C3E /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
