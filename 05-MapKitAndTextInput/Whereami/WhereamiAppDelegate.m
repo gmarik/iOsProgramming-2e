@@ -7,6 +7,7 @@
 //
 
 #import "WhereamiAppDelegate.h"
+#import "MapPoint.h"
 
 @implementation WhereamiAppDelegate
 
@@ -17,6 +18,7 @@
 	didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation{
     NSLog(@"%@", newLocation);
+    [self foundLocation:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -46,6 +48,42 @@
     [mapView setRegion:region animated:true];
 }
 
+// called when 'return' key pressed. return NO to ignore.
+- (BOOL)textFieldShouldReturn:(UITextField *)tf {
+    NSLog(@"%@",tf);
+  
+    [self findLocation];
+  
+    [tf resignFirstResponder];
+  
+    return YES;
+}
+
+// it doesn't actuall looks location up by name
+// it just returns CurrentLocation for MapPoint to be used for MKAnnotationView
+- (void)findLocation {
+    [locationManager startUpdatingLocation];
+    [activityIndicatorView startAnimating];
+    [locationTitleField setHidden:YES];
+}
+
+- (void)foundLocation:(CLLocation *)loc {
+    // create an instance of MapPoint with the current data
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[loc coordinate] title:[locationTitleField text]];
+    
+    [worldView addAnnotation:mp];
+    // release as MKMapView retains annotations
+    [mp release];
+    
+    //Zoom
+    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance([loc coordinate], 250, 250);
+    [worldView setRegion:reg animated:YES];
+    [activityIndicatorView stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -60,7 +98,10 @@
     
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
-    [worldView setShowsUserLocation:YES];
+
+// Actually MKMapView doesn't really look location up on emulator
+// it just shows Apple's HQ location at Infinite Loop instead
+//    [worldView setShowsUserLocation:YES];
         
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];

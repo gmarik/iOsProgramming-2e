@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
+@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate> {
 
     CLLocationManager *locationManager;
     IBOutlet MKMapView *worldView;  // pointer to view instance displaying Map 
@@ -20,5 +20,8 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+-(void)findLocation;
+-(void)foundLocation:(CLLocation*)loc;
 
 @end
