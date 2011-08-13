@@ -13,6 +13,22 @@
 
 @synthesize window=_window;
 
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didUpdateHeading:(CLHeading *)newHeading {
+    NSLog(@"%@", newHeading);
+}
+
 // handle additions of Annotation(s) sent by MapView instance
 -(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
     NSLog(@"%@ : %@", mapView, views);
@@ -32,6 +48,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager setDelegate: self];
+    
+    [locationManager setDistanceFilter  :kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy :kCLLocationAccuracyBest];    
+
+    //[locationManager startUpdatingLocation];
     
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
@@ -83,6 +108,11 @@
 
 - (void)dealloc
 {
+    if ([locationManager delegate] == self)
+        [locationManager setDelegate:nil];
+ 
+    [locationManager release];
+
     [_window release];
     [super dealloc];
 }
