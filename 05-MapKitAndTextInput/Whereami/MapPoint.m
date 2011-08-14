@@ -18,7 +18,14 @@
     
     if (self) {
         coordinate = c;
-        [self setTitle:t];
+        NSDateFormatter *f = [[[NSDateFormatter alloc] init] autorelease];
+        [f setDateStyle:NSDateFormatterShortStyle];
+
+        NSString *_t = [[NSString alloc] initWithFormat:@"%@ @ %@", t, [f stringFromDate:[NSDate date]]];
+
+        [self setTitle:_t];
+
+        [_t release];
     }
     
     return self;
