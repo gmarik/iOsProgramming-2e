@@ -1,6 +1,6 @@
-# [iOS Programming: The Big Nerd Ranch Guide (2nd Edition)](http://amzn.to/nHxQOs)
+# [iOS Programming: The Big Nerd Ranch Guide (2nd Edition)](https://www.amazon.com/dp/0321773772/ref=as_li_tf_til?tag=devzinfo-20&camp=0&creative=0&linkCode=as1&creativeASIN=0321773772&adid=08E8EKKJW5VB2M9B7M6G&)
 
-<iframe src="http://rcm.amazon.com/e/cm?t=devzinfo-20&o=1&p=8&l=as1&asins=0321773772&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+![img](http://ecx.images-amazon.com/images/I/412zhvqyIXL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg)
 
 ## Original sources
 
