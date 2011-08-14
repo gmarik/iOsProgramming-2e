@@ -154,6 +154,9 @@
     [activityIndicatorView stopAnimating];
     [locationTitleField setHidden:NO];
     [locationManager stopUpdatingLocation];
+    
+    // not needed anymore
+    [rgeoc release];
 
     NSLog(@"Mark: %@",placemark);
 }
