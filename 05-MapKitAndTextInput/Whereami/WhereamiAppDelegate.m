@@ -69,18 +69,9 @@
 
 - (void)foundLocation:(CLLocation *)loc {
     // create an instance of MapPoint with the current data
-    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[loc coordinate] title:[locationTitleField text]];
-    
-    [worldView addAnnotation:mp];
-    // release as MKMapView retains annotations
-    [mp release];
-    
-    //Zoom
-    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance([loc coordinate], 250, 250);
-    [worldView setRegion:reg animated:YES];
-    [activityIndicatorView stopAnimating];
-    [locationTitleField setHidden:NO];
-    [locationManager stopUpdatingLocation];
+    rgeoc = [[MKReverseGeocoder alloc] initWithCoordinate:[loc coordinate]];
+    rgeoc.delegate = self;
+    [rgeoc start];
 }
 
 
@@ -98,7 +89,7 @@
     
     // App is a delegate and handles messages from MapView
     [worldView setDelegate:self];
-
+    
 // Actually MKMapView doesn't really look location up on emulator
 // it just shows Apple's HQ location at Infinite Loop instead
 //    [worldView setShowsUserLocation:YES];
@@ -145,6 +136,30 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
+    
+    NSString *title = [NSString stringWithFormat:@"%@, city: %@",[locationTitleField text], [placemark locality]];
+    
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[placemark coordinate] title:title];
+    
+    [worldView addAnnotation:mp];
+    // release as MKMapView retains annotations
+    [mp release];
+    
+    //Zoom
+    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance([placemark coordinate], 250, 250);
+    [worldView setRegion:reg animated:YES];
+    [activityIndicatorView stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+
+    NSLog(@"Mark: %@",placemark);
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error {
+    NSLog(@"Mark ERR: %@",error);
 }
 
 - (void)dealloc

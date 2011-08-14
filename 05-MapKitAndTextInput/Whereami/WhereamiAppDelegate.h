@@ -10,8 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate> {
+@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, MKReverseGeocoderDelegate> {
 
+    MKReverseGeocoder *rgeoc;
     CLLocationManager *locationManager;
     IBOutlet MKMapView *worldView;  // pointer to view instance displaying Map 
     IBOutlet UIActivityIndicatorView *activityIndicatorView;
