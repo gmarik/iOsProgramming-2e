@@ -14,6 +14,7 @@
 		6217D9B813FA319B009AA96B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217D9B713FA319B009AA96B /* main.m */; };
 		6217D9BB13FA319B009AA96B /* HypnosisterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217D9BA13FA319B009AA96B /* HypnosisterAppDelegate.m */; };
 		6217D9BE13FA319B009AA96B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6217D9BC13FA319B009AA96B /* MainWindow.xib */; };
+		6217D9CE13FA3322009AA96B /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217D9CD13FA3322009AA96B /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		6217D9B913FA319B009AA96B /* HypnosisterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HypnosisterAppDelegate.h; sourceTree = "<group>"; };
 		6217D9BA13FA319B009AA96B /* HypnosisterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterAppDelegate.m; sourceTree = "<group>"; };
 		6217D9BD13FA319B009AA96B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6217D9CC13FA3322009AA96B /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		6217D9CD13FA3322009AA96B /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				6217D9BA13FA319B009AA96B /* HypnosisterAppDelegate.m */,
 				6217D9BC13FA319B009AA96B /* MainWindow.xib */,
 				6217D9B113FA319B009AA96B /* Supporting Files */,
+				6217D9CC13FA3322009AA96B /* HypnosisView.h */,
+				6217D9CD13FA3322009AA96B /* HypnosisView.m */,
 			);
 			path = Hypnosister;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			files = (
 				6217D9B813FA319B009AA96B /* main.m in Sources */,
 				6217D9BB13FA319B009AA96B /* HypnosisterAppDelegate.m in Sources */,
+				6217D9CE13FA3322009AA96B /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +264,7 @@
 				6217D9C313FA319B009AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
