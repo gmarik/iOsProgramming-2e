@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HypnosisView.h"
+
+// forward class declaration
+// they say it speeds compilation up
+@class HypnosisView;
 
 @interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate> {
 
