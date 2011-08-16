@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HypnosisView.h"
 
 @interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate> {
 
+    HypnosisView *view; 
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
