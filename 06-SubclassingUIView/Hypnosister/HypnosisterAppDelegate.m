@@ -25,6 +25,9 @@
     // adding it as subview retains it so we can release
     [scrollView release];
     
+    //hide status bar
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    
     CGRect area;
     area.origin = CGPointZero;
     area.size.width = wholeWindow.size.width * 2.0;
