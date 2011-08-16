@@ -36,6 +36,11 @@
     offset.y = wholeWindow.size.height * 0.5;
     [scrollView setContentOffset:offset];
     
+    // use Option (Alt) to simulate two-finger scrolling in Simulator
+    [scrollView setMaximumZoomScale:5];
+    [scrollView setMinimumZoomScale:0.5];
+    [scrollView setDelegate:self];
+    
     
     view = [[HypnosisView alloc] initWithFrame:area];
     
@@ -46,6 +51,10 @@
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return view;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -12,7 +12,7 @@
 // they say it speeds compilation up
 @class HypnosisView;
 
-@interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate> {
+@interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate, UIScrollViewDelegate> {
 
     HypnosisView *view; 
     
