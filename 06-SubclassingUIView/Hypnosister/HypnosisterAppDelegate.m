@@ -20,11 +20,28 @@
 {
     CGRect wholeWindow = [[self window] bounds];
     
-    view = [[HypnosisView alloc] initWithFrame:wholeWindow];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:wholeWindow];
+    [[self window] addSubview:scrollView];
+    // adding it as subview retains it so we can release
+    [scrollView release];
+    
+    CGRect area;
+    area.origin = CGPointZero;
+    area.size.width = wholeWindow.size.width * 2.0;
+    area.size.height = wholeWindow.size.height * 2.0;
+    [scrollView setContentSize:area.size];
+    
+    CGPoint offset;
+    offset.x = wholeWindow.size.width * 0.5;
+    offset.y = wholeWindow.size.height * 0.5;
+    [scrollView setContentOffset:offset];
+    
+    
+    view = [[HypnosisView alloc] initWithFrame:area];
     
     [view setBackgroundColor:[UIColor clearColor]];
     
-    [[self window] addSubview:view];
+    [scrollView addSubview:view];
     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
