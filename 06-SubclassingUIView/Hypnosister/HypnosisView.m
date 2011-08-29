@@ -25,9 +25,16 @@
     
     CGContextSetLineWidth(context, 10);
     
-    [[UIColor lightGrayColor] setStroke];
-    
+    NSArray *colors = [NSArray arrayWithObjects: [UIColor redColor], [UIColor greenColor], [UIColor blueColor]];
+
+    int idx = 0; 
+
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
+        [[colors objectAtIndex:idx] setStroke];
+        idx = idx + 1;
+        if (idx == [colors count]) {
+            idx = 0;
+        }
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2, YES);
         CGContextStrokePath(context);
     }
