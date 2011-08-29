@@ -22,7 +22,8 @@
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:wholeWindow];
     [[self window] addSubview:scrollView];
-    // adding it as subview retains it so we can release
+    // subviews are auto-retained by superviews(parent views)
+    // so we can release
     [scrollView release];
     
     //hide status bar
