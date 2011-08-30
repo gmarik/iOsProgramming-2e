@@ -28,6 +28,12 @@
     return [self init];
 }
 
+-(void)loadView {
+    HypnosisView *hv = [[HypnosisView alloc] initWithFrame:CGRectZero];
+    [hv setBackgroundColor:[UIColor whiteColor]];
+    [self setView:hv];
+    [hv release];
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];
