@@ -31,8 +31,8 @@
     [super viewDidLoad];
     
     NSLog(@"Loaded the view for HypnosisViewController");
+
     //set the background color
-    
     [[self view] setBackgroundColor:[UIColor greenColor]];
 }
 @end
