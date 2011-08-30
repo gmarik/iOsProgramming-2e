@@ -10,7 +10,6 @@
 
 
 @interface CurrentTimeViewController : UIViewController {
-    
-}
 
+}
 @end

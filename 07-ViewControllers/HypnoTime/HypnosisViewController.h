@@ -10,7 +10,6 @@
 
 
 @interface HypnosisViewController : UIViewController {
-    
-}
 
+}
 @end
