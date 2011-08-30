@@ -19,6 +19,7 @@
 		6225FF42140C8353004177CC /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF41140C8353004177CC /* HypnosisViewController.m */; };
 		6225FF45140C976B004177CC /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF43140C976B004177CC /* Time.png */; };
 		6225FF46140C976B004177CC /* Hypno.png in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF44140C976B004177CC /* Hypno.png */; };
+		6225FF61140CA460004177CC /* CurrentTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF60140CA460004177CC /* CurrentTimeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		6225FF41140C8353004177CC /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisViewController.m; sourceTree = "<group>"; };
 		6225FF43140C976B004177CC /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		6225FF44140C976B004177CC /* Hypno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hypno.png; sourceTree = "<group>"; };
+		6225FF60140CA460004177CC /* CurrentTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CurrentTimeViewController.xib; path = ../CurrentTimeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		6225FF11140C7273004177CC /* HypnoTime */ = {
 			isa = PBXGroup;
 			children = (
+				6225FF60140CA460004177CC /* CurrentTimeViewController.xib */,
 				6225FF47140C9771004177CC /* images */,
 				6225FF39140C75DB004177CC /* HypnosisView.h */,
 				6225FF3A140C75DB004177CC /* HypnosisView.m */,
@@ -173,6 +176,7 @@
 				6225FF1F140C7273004177CC /* MainWindow.xib in Resources */,
 				6225FF45140C976B004177CC /* Time.png in Resources */,
 				6225FF46140C976B004177CC /* Hypno.png in Resources */,
+				6225FF61140CA460004177CC /* CurrentTimeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
