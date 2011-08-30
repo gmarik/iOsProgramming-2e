@@ -17,6 +17,8 @@
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Time"];
+
+        [tbi setImage:[UIImage imageNamed:@"Time.png"]];
     }
     
     return self;

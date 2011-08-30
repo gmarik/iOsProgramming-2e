@@ -17,6 +17,8 @@
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Hypnosis"];
+        
+        [tbi setImage:[UIImage imageNamed:@"Hypno.png"]];
     }
 
     return self;
