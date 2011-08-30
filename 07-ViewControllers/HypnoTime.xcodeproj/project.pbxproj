@@ -14,6 +14,9 @@
 		6225FF19140C7273004177CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF18140C7273004177CC /* main.m */; };
 		6225FF1C140C7273004177CC /* HypnoTimeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF1B140C7273004177CC /* HypnoTimeAppDelegate.m */; };
 		6225FF1F140C7273004177CC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF1D140C7273004177CC /* MainWindow.xib */; };
+		6225FF3B140C75DB004177CC /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF3A140C75DB004177CC /* HypnosisView.m */; };
+		6225FF3F140C8305004177CC /* CurrentTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF3E140C8305004177CC /* CurrentTimeViewController.m */; };
+		6225FF42140C8353004177CC /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF41140C8353004177CC /* HypnosisViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		6225FF1A140C7273004177CC /* HypnoTimeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HypnoTimeAppDelegate.h; sourceTree = "<group>"; };
 		6225FF1B140C7273004177CC /* HypnoTimeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnoTimeAppDelegate.m; sourceTree = "<group>"; };
 		6225FF1E140C7273004177CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6225FF39140C75DB004177CC /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		6225FF3A140C75DB004177CC /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		6225FF3D140C8305004177CC /* CurrentTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTimeViewController.h; sourceTree = "<group>"; };
+		6225FF3E140C8305004177CC /* CurrentTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTimeViewController.m; sourceTree = "<group>"; };
+		6225FF40140C8353004177CC /* HypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisViewController.h; sourceTree = "<group>"; };
+		6225FF41140C8353004177CC /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,10 @@
 			children = (
 				6225FF1A140C7273004177CC /* HypnoTimeAppDelegate.h */,
 				6225FF1B140C7273004177CC /* HypnoTimeAppDelegate.m */,
+				6225FF3D140C8305004177CC /* CurrentTimeViewController.h */,
+				6225FF40140C8353004177CC /* HypnosisViewController.h */,
+				6225FF41140C8353004177CC /* HypnosisViewController.m */,
+				6225FF3E140C8305004177CC /* CurrentTimeViewController.m */,
 				6225FF1D140C7273004177CC /* MainWindow.xib */,
 				6225FF12140C7273004177CC /* Supporting Files */,
 			);
@@ -154,6 +167,9 @@
 			files = (
 				6225FF19140C7273004177CC /* main.m in Sources */,
 				6225FF1C140C7273004177CC /* HypnoTimeAppDelegate.m in Sources */,
+				6225FF3B140C75DB004177CC /* HypnosisView.m in Sources */,
+				6225FF3F140C8305004177CC /* CurrentTimeViewController.m in Sources */,
+				6225FF42140C8353004177CC /* HypnosisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
