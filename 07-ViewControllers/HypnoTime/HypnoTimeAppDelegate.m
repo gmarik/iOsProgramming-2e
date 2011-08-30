@@ -7,6 +7,8 @@
 //
 
 #import "HypnoTimeAppDelegate.h"
+#import "HypnosisViewController.h"
+#import "CurrentTimeViewController.h"
 
 @implementation HypnoTimeAppDelegate
 
@@ -15,6 +17,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+
+    //instead [[self window] setRootViewController:tabBarController];
+    [self.window setRootViewController:tabBarController];
+    // NOTE: child views get retained; ok to release here
+    [tabBarController release];
+
+    UIViewController *hvc = [[HypnosisViewController alloc] init];
+    UIViewController *ctvc = [[CurrentTimeViewController alloc] init];
+
+    NSArray *viewControllers = [NSArray arrayWithObjects: hvc, ctvc, nil];
+    [tabBarController setViewControllers: viewControllers];
+
+    [hvc release];
+    [ctvc release];
+
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
