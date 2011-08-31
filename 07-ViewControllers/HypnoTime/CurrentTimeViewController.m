@@ -18,6 +18,10 @@
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Time"];
         [tbi setImage:[UIImage imageNamed:@"Time.png"]];
+        // NOTE: never access/modify view in controller's a initialization method
+        // on low-memory warnings view get destroyed but controller doesn't
+        // so any changes made inside initialization method won't be applied for newly recreated views
+      
         //sending `view` message loads view up
 //      [[self view] setBackgroundColor:[UIColor yellowColor]];
     }
@@ -71,9 +75,12 @@
 //}
 
 
+// all view modifications should be done in this method
+// it's called every time view is loaded for each instance
 -(void)viewDidLoad {
     [super viewDidLoad];
     
     NSLog(@"Loaded CurrentTimeViewController view");
+    [[self view] setBackgroundColor:[UIColor yellowColor]];
 }
 @end
