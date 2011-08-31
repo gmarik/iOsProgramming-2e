@@ -24,6 +24,24 @@
     return self;
 }
 
+-(void)showCurrentTime:(id)sender {
+    
+    NSDate *now = [NSDate date];
+    
+    //static means "only once"
+    // memory for this object is allocated before this method runs
+    // but it's still required to create instance
+    // NOTE: default nil assignment
+    static NSDateFormatter *formatter = nil;
+    
+    if (!formatter) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setTimeStyle:NSDateFormatterShortStyle];
+    }
+    
+    [timeLabel setText:[formatter stringFromDate:now]];
+}
+
 // is used to associate controller and XIB file (nibName)
 // so there are 3 options:
 // 1) use nibName to set the XIB name
