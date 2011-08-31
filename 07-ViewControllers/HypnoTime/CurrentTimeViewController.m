@@ -24,6 +24,19 @@
     return self;
 }
 
+// override this method to initialize timelabel
+-(void)viewWillAppear:(BOOL)animated {
+    NSLog(@"View will appear");
+    [super viewWillAppear:animated];
+    [self showCurrentTime:nil];
+}
+
+// this one overriden just for example
+-(void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+    [super viewWillDisappear:animated];
+}
+
 -(void)showCurrentTime:(id)sender {
     
     NSDate *now = [NSDate date];
