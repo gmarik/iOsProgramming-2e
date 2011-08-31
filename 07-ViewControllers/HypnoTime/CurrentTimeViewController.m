@@ -74,6 +74,6 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"Loaded the view for HypnosisViewController");
+    NSLog(@"Loaded CurrentTimeViewController view");
 }
 @end
