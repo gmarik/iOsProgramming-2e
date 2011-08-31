@@ -83,4 +83,15 @@
     NSLog(@"Loaded CurrentTimeViewController view");
     [[self view] setBackgroundColor:[UIColor yellowColor]];
 }
+
+-(void)viewDidUnload {
+    NSLog(@"Unloaded CurrentTimeViewController view");
+    [super viewDidUnload];
+    // because IBOutlets get retained by owning instances 
+    // and by containing superview it's neccessary to release them here too
+    // otherwise subviews won't be freed
+    // when superviews are unloded
+    [timeLabel release];
+    timeLabel = nil;
+}
 @end
