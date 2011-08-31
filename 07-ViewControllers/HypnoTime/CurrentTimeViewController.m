@@ -17,8 +17,9 @@
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Time"];
-
         [tbi setImage:[UIImage imageNamed:@"Time.png"]];
+        //sending `view` message loads view up
+//      [[self view] setBackgroundColor:[UIColor yellowColor]];
     }
     
     return self;
