@@ -17,12 +17,16 @@
     if (self) {
         [[self tabBarItem] setTitle:@"Map"];
         [[self tabBarItem] setImage:[UIImage imageNamed:@"Hypno.png"]];
+        
+        locationManager = [[CLLocationManager alloc] init];
+        [locationManager setDelegate:self];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [locationManager release];
     [mapView release];
     [super dealloc];
 }
@@ -40,11 +44,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [locationManager startUpdatingLocation];
+    mapView.showsUserLocation = YES;
+    if ([locationManager location]) {
+        NSLog(@"Location %@", [locationManager location]);
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
+    NSLog(@"Unloading MapViewController's view");
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,5 +67,19 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSLog(@"NewLocation: %@", newLocation);
+
+    // Blue dot won't be set properly in Simulator though
+    // In simulator blue dot is always located at Cupertino, CA
+    [mapView setCenterCoordinate:[newLocation coordinate] animated:YES];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([newLocation coordinate], 250,250);
+    [mapView setRegion:region animated:true];
+
+}
+
 
 @end

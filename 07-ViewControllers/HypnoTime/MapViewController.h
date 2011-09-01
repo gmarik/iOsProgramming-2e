@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+#import "CoreLocation/CoreLocation.h"
 
 // Was getting error
 // cannot decode object of class (MKMapView)
 // SOLUTION: link MapKit.framework in App/Targets/BuildPhases/Link Binary with libraries
 
-@interface MapViewController : UIViewController {
-    IBOutlet MKMapView *mapView;    
+@interface MapViewController : UIViewController <CLLocationManagerDelegate> {
+    IBOutlet MKMapView *mapView;
+    CLLocationManager *locationManager;
 }
 
 @end
