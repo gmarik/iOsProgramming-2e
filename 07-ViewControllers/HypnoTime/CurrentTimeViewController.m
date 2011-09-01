@@ -94,4 +94,11 @@
     [timeLabel release];
     timeLabel = nil;
 }
+-(void)dealloc {
+    // when controller gets deallocated
+    //viewDidUnload doesn't get fired
+    // so release timeLabel here too
+    [timeLabel release];
+    [super dealloc];
+}
 @end
