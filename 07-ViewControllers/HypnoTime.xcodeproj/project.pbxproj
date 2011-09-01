@@ -20,6 +20,8 @@
 		6225FF45140C976B004177CC /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF43140C976B004177CC /* Time.png */; };
 		6225FF46140C976B004177CC /* Hypno.png in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF44140C976B004177CC /* Hypno.png */; };
 		6225FF61140CA460004177CC /* CurrentTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF60140CA460004177CC /* CurrentTimeViewController.xib */; };
+		6225FF65140F2C16004177CC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FF63140F2C16004177CC /* MapViewController.m */; };
+		6225FF66140F2C16004177CC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6225FF64140F2C16004177CC /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		6225FF43140C976B004177CC /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		6225FF44140C976B004177CC /* Hypno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hypno.png; sourceTree = "<group>"; };
 		6225FF60140CA460004177CC /* CurrentTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CurrentTimeViewController.xib; path = ../CurrentTimeViewController.xib; sourceTree = "<group>"; };
+		6225FF62140F2C15004177CC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6225FF63140F2C16004177CC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6225FF64140F2C16004177CC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,9 @@
 				6225FF3A140C75DB004177CC /* HypnosisView.m */,
 				6225FF1A140C7273004177CC /* HypnoTimeAppDelegate.h */,
 				6225FF1B140C7273004177CC /* HypnoTimeAppDelegate.m */,
+				6225FF62140F2C15004177CC /* MapViewController.h */,
+				6225FF63140F2C16004177CC /* MapViewController.m */,
+				6225FF64140F2C16004177CC /* MapViewController.xib */,
 				6225FF3D140C8305004177CC /* CurrentTimeViewController.h */,
 				6225FF40140C8353004177CC /* HypnosisViewController.h */,
 				6225FF41140C8353004177CC /* HypnosisViewController.m */,
@@ -177,6 +185,7 @@
 				6225FF45140C976B004177CC /* Time.png in Resources */,
 				6225FF46140C976B004177CC /* Hypno.png in Resources */,
 				6225FF61140CA460004177CC /* CurrentTimeViewController.xib in Resources */,
+				6225FF66140F2C16004177CC /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +201,7 @@
 				6225FF3B140C75DB004177CC /* HypnosisView.m in Sources */,
 				6225FF3F140C8305004177CC /* CurrentTimeViewController.m in Sources */,
 				6225FF42140C8353004177CC /* HypnosisViewController.m in Sources */,
+				6225FF65140F2C16004177CC /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

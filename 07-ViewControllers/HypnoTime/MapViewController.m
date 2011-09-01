@@ -15,13 +15,15 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[self tabBarItem] setTitle:@"Map"];
+        [[self tabBarItem] setImage:[UIImage imageNamed:@"Hypno.png"]];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [mapView release];
     [super dealloc];
 }
 
@@ -46,6 +48,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [mapView release];
+    mapView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

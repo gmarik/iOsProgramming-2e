@@ -9,6 +9,7 @@
 #import "HypnoTimeAppDelegate.h"
 #import "HypnosisViewController.h"
 #import "CurrentTimeViewController.h"
+#import "MapViewController.h"
 
 @implementation HypnoTimeAppDelegate
 
@@ -26,12 +27,14 @@
 
     UIViewController *hvc = [[HypnosisViewController alloc] init];
     UIViewController *ctvc = [[CurrentTimeViewController alloc] init];
-
-    NSArray *viewControllers = [NSArray arrayWithObjects: hvc, ctvc, nil];
+    MapViewController *mvc = [[MapViewController alloc] init];
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects: hvc, ctvc, mvc, nil];
     [tabBarController setViewControllers: viewControllers];
 
     [hvc release];
     [ctvc release];
+    [hvc release];
 
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
