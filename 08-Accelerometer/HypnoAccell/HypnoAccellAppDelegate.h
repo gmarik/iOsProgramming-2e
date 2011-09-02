@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HypnoAccellAppDelegate : NSObject <UIApplicationDelegate> {
+@interface HypnoAccellAppDelegate : NSObject <UIApplicationDelegate, UIAccelerometerDelegate> {
 
 }
 

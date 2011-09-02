@@ -19,7 +19,12 @@
     HypnosisView *hv = [[HypnosisView alloc] initWithFrame:[self.window frame]];
     [self.window addSubview:hv];
     [hv release];
-    
+
+    //utilize accelerometer
+    UIAccelerometer *acc = [UIAccelerometer sharedAccelerometer];
+    [acc setUpdateInterval:0.1];
+    [acc setDelegate:self];
+
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
@@ -68,6 +73,12 @@
 {
     [_window release];
     [super dealloc];
+}
+
+#pragma mark - UIAccelerometerDelegate
+
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)accel {
+    NSLog(@"%f, %f, %f",[accel x], [accel y], [accel z]);
 }
 
 @end
