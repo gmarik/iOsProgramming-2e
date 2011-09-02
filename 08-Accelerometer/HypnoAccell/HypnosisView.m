@@ -16,6 +16,8 @@
 - (void)drawRect:(CGRect) rect {
     CGRect bounds = [self bounds];
     
+    [self setBackgroundColor:[UIColor greenColor]];
+    
     CGPoint center;
     
     center.x = bounds.origin.x + bounds.size.width / 2.0;
@@ -37,7 +39,7 @@
         CGContextStrokePath(context);
     }
     
-    [self setBackgroundColor:[UIColor greenColor]];
+
 }
 
 
