@@ -13,4 +13,7 @@
     
 }
 
+@property (nonatomic, assign) float xShift;
+@property (nonatomic, assign) float yShift;
+
 @end

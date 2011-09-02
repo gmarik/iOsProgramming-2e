@@ -11,6 +11,8 @@
 
 @implementation HypnosisView
 
+@synthesize xShift,yShift;
+
 - (void)drawRect:(CGRect) rect {
     CGRect bounds = [self bounds];
     
