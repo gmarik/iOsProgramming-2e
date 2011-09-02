@@ -7,6 +7,7 @@
 //
 
 #import "HypnoAccellAppDelegate.h"
+#import "HypnosisView.h"
 
 @implementation HypnoAccellAppDelegate
 
@@ -15,6 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    HypnosisView *hv = [[HypnosisView alloc] initWithFrame:[self.window frame]];
+    [self.window addSubview:hv];
+    [hv release];
+    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
