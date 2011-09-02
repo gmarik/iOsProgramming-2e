@@ -14,6 +14,7 @@
 		6225FFD114104CCE004177CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FFD014104CCE004177CC /* main.m */; };
 		6225FFD414104CCE004177CC /* HypnoAccellAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6225FFD314104CCE004177CC /* HypnoAccellAppDelegate.m */; };
 		6225FFD714104CCE004177CC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6225FFD514104CCE004177CC /* MainWindow.xib */; };
+		629BCA1A1410821F006B46EB /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629BCA191410821F006B46EB /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		6225FFD214104CCE004177CC /* HypnoAccellAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HypnoAccellAppDelegate.h; sourceTree = "<group>"; };
 		6225FFD314104CCE004177CC /* HypnoAccellAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnoAccellAppDelegate.m; sourceTree = "<group>"; };
 		6225FFD614104CCE004177CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		629BCA181410821F006B46EB /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		629BCA191410821F006B46EB /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 		6225FFC914104CCE004177CC /* HypnoAccell */ = {
 			isa = PBXGroup;
 			children = (
+				629BCA181410821F006B46EB /* HypnosisView.h */,
+				629BCA191410821F006B46EB /* HypnosisView.m */,
 				6225FFD214104CCE004177CC /* HypnoAccellAppDelegate.h */,
 				6225FFD314104CCE004177CC /* HypnoAccellAppDelegate.m */,
 				6225FFD514104CCE004177CC /* MainWindow.xib */,
@@ -154,6 +159,7 @@
 			files = (
 				6225FFD114104CCE004177CC /* main.m in Sources */,
 				6225FFD414104CCE004177CC /* HypnoAccellAppDelegate.m in Sources */,
+				629BCA1A1410821F006B46EB /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +264,7 @@
 				6225FFDC14104CCE004177CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
