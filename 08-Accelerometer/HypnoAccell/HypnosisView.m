@@ -12,6 +12,15 @@
 @implementation HypnosisView
 
 @synthesize xShift,yShift;
+@synthesize stripeColor;
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setStripeColor:[UIColor lightGrayColor]];
+    }
+    return self;
+}
 
 - (void)drawRect:(CGRect) rect {
     CGRect bounds = [self bounds];
@@ -29,18 +38,20 @@
     
     CGContextSetLineWidth(context, 10);
     
+    [stripeColor setStroke];
+
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
-        [[UIColor grayColor] setStroke];
-        
         center.x += self.xShift;
         center.y += self.yShift;
         
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2, YES);
         CGContextStrokePath(context);
     }
-    
-
 }
 
+-(void)dealloc {
+    [self.stripeColor release];
+    [super dealloc];
+}
 
 @end
