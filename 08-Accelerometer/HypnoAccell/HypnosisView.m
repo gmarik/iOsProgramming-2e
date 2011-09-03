@@ -54,4 +54,25 @@
     [super dealloc];
 }
 
+// This is a little bit confusing but this method is provided by system
+// "shake detection" services to allow reactions without using accelerometer directly
+// so u don't have to use math do strip out shakes
+// NOTE: no way to test on simulator even with accelerometerSimulator
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"Shake started");
+        
+        float r,g,b;
+        
+        r = random() % 256 / 256.0;
+        g = random() % 256 / 256.0;
+        b = random() % 256 / 256.0;
+        
+        [self setStripeColor:[UIColor colorWithRed:r green:g blue:b alpha:1]];
+
+        [self setNeedsDisplay];
+    }
+}
+
+
 @end
