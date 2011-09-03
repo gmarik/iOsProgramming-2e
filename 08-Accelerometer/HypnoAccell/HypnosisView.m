@@ -17,6 +17,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setBackgroundColor:[UIColor greenColor]];
         [self setStripeColor:[UIColor lightGrayColor]];
     }
     return self;
@@ -24,8 +25,6 @@
 
 - (void)drawRect:(CGRect) rect {
     CGRect bounds = [self bounds];
-    
-    [self setBackgroundColor:[UIColor greenColor]];
     
     CGPoint center;
     
