@@ -88,6 +88,9 @@
     [hv setXShift:[hv xShift] * 0.8 + [accel x] * 2.0];
     [hv setYShift:[hv yShift] * 0.8 + [accel y] * 2.0];
     
+    //make color change depending on acceleration
+    [hv setStripeColor:[UIColor colorWithRed:hv.xShift green:hv.yShift blue:0.5 alpha:1]];
+    
     [hv setNeedsDisplay];
 }
 
