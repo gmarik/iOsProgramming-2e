@@ -19,6 +19,11 @@
     HypnosisView *hv = [[HypnosisView alloc] initWithFrame:[self.window frame]];
     [self.window addSubview:hv];
     [hv release];
+    
+    // this is required in order to become 
+    // the object which is sent all the events
+    // shake events in this case
+    [hv becomeFirstResponder];
 
     //utilize accelerometer
     UIAccelerometer *acc = [UIAccelerometer sharedAccelerometer];
