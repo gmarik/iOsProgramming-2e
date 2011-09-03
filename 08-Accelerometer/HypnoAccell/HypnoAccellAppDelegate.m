@@ -8,6 +8,7 @@
 
 #import "HypnoAccellAppDelegate.h"
 #import "HypnosisView.h"
+#import "AccelerometerSimulation.h"
 
 @implementation HypnoAccellAppDelegate
 

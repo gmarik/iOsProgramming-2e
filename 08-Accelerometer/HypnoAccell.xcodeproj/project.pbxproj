@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621840021412A98600B38940 /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 621840011412A98600B38940 /* AccelerometerSimulation.m */; };
 		6225FFC414104CCE004177CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225FFC314104CCE004177CC /* UIKit.framework */; };
 		6225FFC614104CCE004177CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225FFC514104CCE004177CC /* Foundation.framework */; };
 		6225FFC814104CCE004177CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225FFC714104CCE004177CC /* CoreGraphics.framework */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		621840001412A98600B38940 /* AccelerometerSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerSimulation.h; sourceTree = "<group>"; };
+		621840011412A98600B38940 /* AccelerometerSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerSimulation.m; sourceTree = "<group>"; };
 		6225FFBF14104CCE004177CC /* HypnoAccell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypnoAccell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6225FFC314104CCE004177CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6225FFC514104CCE004177CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +80,8 @@
 		6225FFC914104CCE004177CC /* HypnoAccell */ = {
 			isa = PBXGroup;
 			children = (
+				621840001412A98600B38940 /* AccelerometerSimulation.h */,
+				621840011412A98600B38940 /* AccelerometerSimulation.m */,
 				629BCA181410821F006B46EB /* HypnosisView.h */,
 				629BCA191410821F006B46EB /* HypnosisView.m */,
 				6225FFD214104CCE004177CC /* HypnoAccellAppDelegate.h */,
@@ -160,6 +165,7 @@
 				6225FFD114104CCE004177CC /* main.m in Sources */,
 				6225FFD414104CCE004177CC /* HypnoAccellAppDelegate.m in Sources */,
 				629BCA1A1410821F006B46EB /* HypnosisView.m in Sources */,
+				621840021412A98600B38940 /* AccelerometerSimulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,7 @@
 				GCC_PREFIX_HEADER = "HypnoAccell/HypnoAccell-Prefix.pch";
 				INFOPLIST_FILE = "HypnoAccell/HypnoAccell-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -240,6 +247,7 @@
 				GCC_PREFIX_HEADER = "HypnoAccell/HypnoAccell-Prefix.pch";
 				INFOPLIST_FILE = "HypnoAccell/HypnoAccell-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
