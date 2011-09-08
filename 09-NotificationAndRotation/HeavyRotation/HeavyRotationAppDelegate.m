@@ -7,6 +7,7 @@
 //
 
 #import "HeavyRotationAppDelegate.h"
+#import "HeavyViewController.h"
 
 @implementation HeavyRotationAppDelegate
 
@@ -27,6 +28,8 @@
                name:UIDeviceOrientationDidChangeNotification 
              object:device];
     
+    HeavyViewController *hvc = [[[HeavyViewController alloc] init] autorelease];
+    [self.window setRootViewController:hvc];
     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
