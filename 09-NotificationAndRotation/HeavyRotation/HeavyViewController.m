@@ -16,4 +16,9 @@
 //   controller it's totally safe to remove all that
 // - also yet there's no instance variables so no reason to owerride defaults
 
+// allow autorotation
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)x {
+    return (x == UIInterfaceOrientationPortrait) || UIInterfaceOrientationIsLandscape(x);
+}
+
 @end
