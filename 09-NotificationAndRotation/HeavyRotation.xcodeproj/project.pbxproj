@@ -16,6 +16,7 @@
 		628A01C6141862C1000B5C40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 628A01C4141862C1000B5C40 /* MainWindow.xib */; };
 		62D5BFDD14186E0A0012A012 /* HeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D5BFDB14186E0A0012A012 /* HeavyViewController.m */; };
 		62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */; };
+		62D5BFE1141871930012A012 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFE0141871930012A012 /* img.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		62D5BFDA14186E0A0012A012 /* HeavyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeavyViewController.h; sourceTree = "<group>"; };
 		62D5BFDB14186E0A0012A012 /* HeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeavyViewController.m; sourceTree = "<group>"; };
 		62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeavyViewController.xib; sourceTree = "<group>"; };
+		62D5BFE0141871930012A012 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		628A01B8141862C1000B5C40 /* HeavyRotation */ = {
 			isa = PBXGroup;
 			children = (
+				62D5BFE0141871930012A012 /* img.png */,
 				628A01C1141862C1000B5C40 /* HeavyRotationAppDelegate.h */,
 				628A01C2141862C1000B5C40 /* HeavyRotationAppDelegate.m */,
 				628A01C4141862C1000B5C40 /* MainWindow.xib */,
@@ -151,6 +154,7 @@
 				628A01BD141862C1000B5C40 /* InfoPlist.strings in Resources */,
 				628A01C6141862C1000B5C40 /* MainWindow.xib in Resources */,
 				62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */,
+				62D5BFE1141871930012A012 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
