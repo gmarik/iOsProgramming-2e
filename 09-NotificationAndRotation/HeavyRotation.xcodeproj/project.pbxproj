@@ -14,6 +14,8 @@
 		628A01C0141862C1000B5C40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A01BF141862C1000B5C40 /* main.m */; };
 		628A01C3141862C1000B5C40 /* HeavyRotationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A01C2141862C1000B5C40 /* HeavyRotationAppDelegate.m */; };
 		628A01C6141862C1000B5C40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 628A01C4141862C1000B5C40 /* MainWindow.xib */; };
+		62D5BFDD14186E0A0012A012 /* HeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D5BFDB14186E0A0012A012 /* HeavyViewController.m */; };
+		62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		628A01C1141862C1000B5C40 /* HeavyRotationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyRotationAppDelegate.h; sourceTree = "<group>"; };
 		628A01C2141862C1000B5C40 /* HeavyRotationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeavyRotationAppDelegate.m; sourceTree = "<group>"; };
 		628A01C5141862C1000B5C40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		62D5BFDA14186E0A0012A012 /* HeavyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeavyViewController.h; sourceTree = "<group>"; };
+		62D5BFDB14186E0A0012A012 /* HeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeavyViewController.m; sourceTree = "<group>"; };
+		62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeavyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,9 @@
 				628A01C2141862C1000B5C40 /* HeavyRotationAppDelegate.m */,
 				628A01C4141862C1000B5C40 /* MainWindow.xib */,
 				628A01B9141862C1000B5C40 /* Supporting Files */,
+				62D5BFDA14186E0A0012A012 /* HeavyViewController.h */,
+				62D5BFDB14186E0A0012A012 /* HeavyViewController.m */,
+				62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */,
 			);
 			path = HeavyRotation;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 			files = (
 				628A01BD141862C1000B5C40 /* InfoPlist.strings in Resources */,
 				628A01C6141862C1000B5C40 /* MainWindow.xib in Resources */,
+				62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +163,7 @@
 			files = (
 				628A01C0141862C1000B5C40 /* main.m in Sources */,
 				628A01C3141862C1000B5C40 /* HeavyRotationAppDelegate.m in Sources */,
+				62D5BFDD14186E0A0012A012 /* HeavyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +268,7 @@
 				628A01CB141862C1000B5C40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
