@@ -17,6 +17,7 @@
 		62D5BFDD14186E0A0012A012 /* HeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D5BFDB14186E0A0012A012 /* HeavyViewController.m */; };
 		62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */; };
 		62D5BFE1141871930012A012 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFE0141871930012A012 /* img.png */; };
+		62D5BFF214187A170012A012 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D5BFF014187A170012A012 /* MainWindow-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		62D5BFDB14186E0A0012A012 /* HeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeavyViewController.m; sourceTree = "<group>"; };
 		62D5BFDC14186E0A0012A012 /* HeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeavyViewController.xib; sourceTree = "<group>"; };
 		62D5BFE0141871930012A012 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
+		62D5BFF114187A170012A012 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		628A01B8141862C1000B5C40 /* HeavyRotation */ = {
 			isa = PBXGroup;
 			children = (
+				62D5BFEF14187A140012A012 /* iPad */,
 				62D5BFE0141871930012A012 /* img.png */,
 				628A01C1141862C1000B5C40 /* HeavyRotationAppDelegate.h */,
 				628A01C2141862C1000B5C40 /* HeavyRotationAppDelegate.m */,
@@ -102,6 +105,14 @@
 				628A01BF141862C1000B5C40 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62D5BFEF14187A140012A012 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				62D5BFF014187A170012A012 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				628A01C6141862C1000B5C40 /* MainWindow.xib in Resources */,
 				62D5BFDE14186E0A0012A012 /* HeavyViewController.xib in Resources */,
 				62D5BFE1141871930012A012 /* img.png in Resources */,
+				62D5BFF214187A170012A012 /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +200,14 @@
 				628A01C5141862C1000B5C40 /* en */,
 			);
 			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		62D5BFF014187A170012A012 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D5BFF114187A170012A012 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -234,7 +254,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeavyRotation/HeavyRotation-Prefix.pch";
 				INFOPLIST_FILE = "HeavyRotation/HeavyRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -247,7 +269,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeavyRotation/HeavyRotation-Prefix.pch";
 				INFOPLIST_FILE = "HeavyRotation/HeavyRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
