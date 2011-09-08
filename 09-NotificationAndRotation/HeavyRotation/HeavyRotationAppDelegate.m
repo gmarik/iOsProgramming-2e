@@ -15,9 +15,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    UIDevice *device = [UIDevice currentDevice];
+
+    [device beginGeneratingDeviceOrientationNotifications];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    // observe orientation change notifications from the UI device
+    [nc addObserver:self 
+           selector:@selector(orientationChanged:) 
+               name:UIDeviceOrientationDidChangeNotification 
+             object:device];
+    
+    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+//notification callback
+-(void)orientationChanged:(NSNotification *)note {
+    
+    NSLog(@"%@", note);
+    
 }
 
 - (void)dealloc
