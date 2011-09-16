@@ -15,6 +15,7 @@
 		62159E0F1422D35F001B858B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E0E1422D35F001B858B /* AppDelegate.m */; };
 		62159E121422D35F001B858B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62159E101422D35F001B858B /* MainStoryboard.storyboard */; };
 		62159E151422D35F001B858B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E141422D35F001B858B /* ViewController.m */; };
+		62159E211422D655001B858B /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E201422D655001B858B /* ItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		62159E111422D35F001B858B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		62159E131422D35F001B858B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		62159E141422D35F001B858B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		62159E1F1422D655001B858B /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		62159E201422D655001B858B /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
 				62159E0E1422D35F001B858B /* AppDelegate.m */,
 				62159E101422D35F001B858B /* MainStoryboard.storyboard */,
+				62159E1F1422D655001B858B /* ItemsViewController.h */,
+				62159E201422D655001B858B /* ItemsViewController.m */,
 				62159E131422D35F001B858B /* ViewController.h */,
 				62159E141422D35F001B858B /* ViewController.m */,
 				62159E051422D35F001B858B /* Supporting Files */,
@@ -163,6 +168,7 @@
 				62159E0B1422D35F001B858B /* main.m in Sources */,
 				62159E0F1422D35F001B858B /* AppDelegate.m in Sources */,
 				62159E151422D35F001B858B /* ViewController.m in Sources */,
+				62159E211422D655001B858B /* ItemsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +280,7 @@
 				62159E1A1422D35F001B858B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
