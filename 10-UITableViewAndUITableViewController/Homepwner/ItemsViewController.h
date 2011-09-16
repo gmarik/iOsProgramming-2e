@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ItemsViewController : NSObject
+
+// set proper super-class
+@interface ItemsViewController : UITableViewController
 
 @end
