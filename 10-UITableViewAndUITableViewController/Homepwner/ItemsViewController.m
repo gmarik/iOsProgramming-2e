@@ -9,6 +9,16 @@
 #import "ItemsViewController.h"
 #import "PosessionStore.h"
 
+// I was wondering where is the view for this controller
+// Turns out that UITableViewController gets view automatically
+// as from UITableViewController's docs:
+
+// The UITableViewController class creates a controller object that manages a table view.
+// If a nib file is specified via the initWithNibName:bundle: method (which is declared by the superclass UIViewController), 
+// UITableViewController loads the table view archived in the nib file. 
+// Otherwise, it creates an unconfigured UITableView object with the correct dimensions and autoresize mask. 
+// You can access this view through the tableView property.
+
 @implementation ItemsViewController
 
 - (id)init {
