@@ -17,6 +17,7 @@
 		62159E151422D35F001B858B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E141422D35F001B858B /* ViewController.m */; };
 		62159E211422D655001B858B /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E201422D655001B858B /* ItemsViewController.m */; };
 		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
+		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		62159E201422D655001B858B /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		6241E8F11422F8A60008C49F /* Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posession.h; sourceTree = "<group>"; };
 		6241E8F21422F8A60008C49F /* Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posession.m; sourceTree = "<group>"; };
+		6241E8F51422F9730008C49F /* PosessionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosessionStore.h; sourceTree = "<group>"; };
+		6241E8F61422F9730008C49F /* PosessionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosessionStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 			children = (
 				6241E8F11422F8A60008C49F /* Posession.h */,
 				6241E8F21422F8A60008C49F /* Posession.m */,
+				6241E8F51422F9730008C49F /* PosessionStore.h */,
+				6241E8F61422F9730008C49F /* PosessionStore.m */,
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
 				62159E0E1422D35F001B858B /* AppDelegate.m */,
 				62159E101422D35F001B858B /* MainStoryboard.storyboard */,
@@ -175,6 +180,7 @@
 				62159E151422D35F001B858B /* ViewController.m in Sources */,
 				62159E211422D655001B858B /* ItemsViewController.m in Sources */,
 				6241E8F31422F8A60008C49F /* Posession.m in Sources */,
+				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
