@@ -10,5 +10,7 @@
 
 @interface PosessionStore : NSObject
 
++(PosessionStore *)defaultStore;
+
 @end
 
