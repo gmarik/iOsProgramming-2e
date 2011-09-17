@@ -13,8 +13,6 @@
 		62159E091422D35F001B858B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62159E071422D35F001B858B /* InfoPlist.strings */; };
 		62159E0B1422D35F001B858B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E0A1422D35F001B858B /* main.m */; };
 		62159E0F1422D35F001B858B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E0E1422D35F001B858B /* AppDelegate.m */; };
-		62159E121422D35F001B858B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62159E101422D35F001B858B /* MainStoryboard.storyboard */; };
-		62159E151422D35F001B858B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E141422D35F001B858B /* ViewController.m */; };
 		62159E211422D655001B858B /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E201422D655001B858B /* ItemsViewController.m */; };
 		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
@@ -31,9 +29,6 @@
 		62159E0C1422D35F001B858B /* Homepwner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Homepwner-Prefix.pch"; sourceTree = "<group>"; };
 		62159E0D1422D35F001B858B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62159E0E1422D35F001B858B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		62159E111422D35F001B858B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		62159E131422D35F001B858B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		62159E141422D35F001B858B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		62159E1F1422D655001B858B /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		62159E201422D655001B858B /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		6241E8F11422F8A60008C49F /* Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posession.h; sourceTree = "<group>"; };
@@ -92,11 +87,8 @@
 				6241E8F61422F9730008C49F /* PosessionStore.m */,
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
 				62159E0E1422D35F001B858B /* AppDelegate.m */,
-				62159E101422D35F001B858B /* MainStoryboard.storyboard */,
 				62159E1F1422D655001B858B /* ItemsViewController.h */,
 				62159E201422D655001B858B /* ItemsViewController.m */,
-				62159E131422D35F001B858B /* ViewController.h */,
-				62159E141422D35F001B858B /* ViewController.m */,
 				62159E051422D35F001B858B /* Supporting Files */,
 			);
 			path = Homepwner;
@@ -164,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62159E091422D35F001B858B /* InfoPlist.strings in Resources */,
-				62159E121422D35F001B858B /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +168,6 @@
 			files = (
 				62159E0B1422D35F001B858B /* main.m in Sources */,
 				62159E0F1422D35F001B858B /* AppDelegate.m in Sources */,
-				62159E151422D35F001B858B /* ViewController.m in Sources */,
 				62159E211422D655001B858B /* ItemsViewController.m in Sources */,
 				6241E8F31422F8A60008C49F /* Posession.m in Sources */,
 				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
@@ -193,14 +183,6 @@
 				62159E081422D35F001B858B /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		62159E101422D35F001B858B /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62159E111422D35F001B858B /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
