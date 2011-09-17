@@ -10,6 +10,8 @@
 
 @implementation PosessionStore
 
+@synthesize posessions;
+
 #pragma mark 
 
 // Simplest Singleton implementation
@@ -24,8 +26,22 @@ static PosessionStore *_defaultStore = nil;
     return _defaultStore;
 }
 
+#pragma mark constructor
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.posessions = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
+#pragma mark Posessions manipulation
+
 -(Posession *)createPosession {
-    Posession *p = [[Posession alloc] init];
+    Posession *p = [Posession randomPosession];
+    [self.posessions addObject:p];
     return p;
 }
 

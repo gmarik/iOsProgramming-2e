@@ -13,6 +13,8 @@
 
 +(PosessionStore *)defaultStore;
 
+@property (retain,atomic,strong) NSMutableArray* posessions;
+
 -(Posession *)createPosession;
 
 @end
