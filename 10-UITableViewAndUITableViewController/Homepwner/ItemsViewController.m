@@ -16,7 +16,7 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
 
     if (self) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             [[PosessionStore defaultStore] createPosession];
         }
     }
@@ -32,4 +32,23 @@
     return [self init];
 }
 
+
+
+#pragma mark UITableViewDataSource protocol
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[PosessionStore.defaultStore posessions] count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                  reuseIdentifier:@"UITableViewCell"];
+    
+    Posession *p = [[[PosessionStore defaultStore] posessions] objectAtIndex:[indexPath row]];
+    
+    [[cell textLabel] setText:[p description]];
+    
+    return cell;
+}
 @end
