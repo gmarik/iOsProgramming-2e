@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Posession.h"
 
 @interface PosessionStore : NSObject
 
 +(PosessionStore *)defaultStore;
+
+-(Posession *)createPosession;
 
 @end
 

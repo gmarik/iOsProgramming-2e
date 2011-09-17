@@ -24,4 +24,9 @@ static PosessionStore *_defaultStore = nil;
     return _defaultStore;
 }
 
+-(Posession *)createPosession {
+    Posession *p = [[Posession alloc] init];
+    return p;
+}
+
 @end
