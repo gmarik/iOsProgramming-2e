@@ -7,11 +7,21 @@
 //
 
 #import "ItemsViewController.h"
+#import "PosessionStore.h"
 
 @implementation ItemsViewController
 
 - (id)init {
-    return [super initWithStyle:UITableViewStyleGrouped];
+
+    self = [super initWithStyle:UITableViewStyleGrouped];
+
+    if (self) {
+        for (int i = 0; i < 10; i++) {
+            [[PosessionStore defaultStore] createPosession];
+        }
+    }
+
+    return self;
 }
 
 // this is required in order to be consistent
