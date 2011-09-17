@@ -46,8 +46,22 @@
 
 #pragma mark UITableViewDataSource protocol
 
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [NSArray arrayWithObjects:@"Radios", @"Phones", @"Cartones", nil];
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[NSArray arrayWithObjects:@"Radios", @"Phones", @"Cartones", nil] objectAtIndex:section];
+}
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[PosessionStore.defaultStore posessions] count];
+    return [[PosessionStore.defaultStore posessions] count] / [self numberOfSectionsInTableView:tableView];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,13 +71,18 @@
     
     
     if (!cell) { // otherwise create
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                   reuseIdentifier:@"UITableViewCell"];
     }
+    // 5 is number of rows in section
+    int idx = [indexPath section] * 5 + [indexPath row];
     
-    Posession *p = [[[PosessionStore defaultStore] posessions] objectAtIndex:[indexPath row]];
+    Posession *p = [[[PosessionStore defaultStore] posessions] objectAtIndex:idx];
+    
+    NSString *s = [NSString stringWithFormat:@"%d", idx];
     
     [[cell textLabel] setText:[p description]];
+    [[cell detailTextLabel] setText:s];  
     
     return cell;
 }
