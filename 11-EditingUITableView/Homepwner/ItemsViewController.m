@@ -56,6 +56,17 @@
     return headerView;
 }
 
+-(void)toggleEditMode:(id)sender {
+    [sender setTitle:([self isEditing] ? @"Edit" : @"Done") forState:UIControlStateNormal];
+    [self setEditing:![self isEditing] animated:YES];
+}
+
+-(void)addNewPosession:(id)sender {
+    [[PosessionStore defaultStore] createPosession];
+    
+    [[self tableView] reloadData];
+}
+
 #pragma mark UITableViewDataSource protocol
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
