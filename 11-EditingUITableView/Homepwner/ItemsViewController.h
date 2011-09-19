@@ -11,5 +11,12 @@
 
 // set proper super-class
 @interface ItemsViewController : UITableViewController
+{
+    IBOutlet UIView *headerView;
+}
+
+-(UIView *)headerView;
+-(IBAction)addNewPosession:(id)sender;
+-(IBAction)toggleEditMode:(id)sender;
 
 @end
