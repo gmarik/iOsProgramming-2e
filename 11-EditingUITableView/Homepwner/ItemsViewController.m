@@ -42,6 +42,20 @@
     return [self init];
 }
 
+#pragma mark headerView
+
+-(UIView *)headerView {
+    if(!headerView) {
+        //Load NSBundle
+        //NOTE: owner set to self
+        //As I understand 
+        // 1) IB want's to know about File's Owner interface to be able connect object in Design TIme
+        // 2) in Run time File's Owner is set with owner:self that's why it's require  
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    return headerView;
+}
+
 
 
 #pragma mark UITableViewDataSource protocol
