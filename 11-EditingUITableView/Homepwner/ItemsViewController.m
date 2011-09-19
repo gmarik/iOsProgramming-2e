@@ -56,10 +56,15 @@
     return headerView;
 }
 
-
-
 #pragma mark UITableViewDataSource protocol
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [self headerView];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return [[self headerView] bounds].size.height;
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
