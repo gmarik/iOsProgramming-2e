@@ -76,8 +76,18 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         PosessionStore *ps = [PosessionStore defaultStore];
         [ps removePosession:[ps.posessions objectAtIndex:[indexPath row]]];
+        
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
     }
+}
+
+-(void)     tableView:(UITableView *)tableView 
+   moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath 
+          toIndexPath:(NSIndexPath *)destinationIndexPath 
+{
+    [[PosessionStore defaultStore] 
+        moveAtIndex:[sourceIndexPath row] 
+            toIndex:[destinationIndexPath row]];
 }
 
 // Header

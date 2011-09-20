@@ -49,4 +49,23 @@ static PosessionStore *_defaultStore = nil;
     return  posession;
 }
 
+-(void)moveAtIndex:(int)from 
+           toIndex:(int)to 
+{
+    if (from == to) {
+        return;
+    }
+    
+    Posession *p = [self.posessions objectAtIndex:from];
+    // We should have retained `p` if we had no ARC
+    // as array object removal decrements retain count
+    //[p retain]
+    
+    [self.posessions removeObjectAtIndex:from];
+    [self.posessions insertObject:p atIndex:to];
+    
+    //We should have released `p` 
+    // as adding object to an array retains it
+    // [p release];
+}
 @end

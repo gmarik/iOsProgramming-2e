@@ -17,6 +17,7 @@
 
 -(Posession *)createPosession;
 -(Posession *)removePosession:(Posession*)p;
+-(void)moveAtIndex:(int)from toIndex:(int)to;
 
 @end
 
