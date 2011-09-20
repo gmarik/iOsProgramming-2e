@@ -56,12 +56,12 @@
     return headerView;
 }
 
--(void)toggleEditMode:(id)sender {
+-(IBAction)toggleEditMode:(id)sender {
     [sender setTitle:([self isEditing] ? @"Edit" : @"Done") forState:UIControlStateNormal];
     [self setEditing:![self isEditing] animated:YES];
 }
 
--(void)addNewPosession:(id)sender {
+ -(IBAction)addNewPosession:(id)sender {
     [[PosessionStore defaultStore] createPosession];
     
     [[self tableView] reloadData];
@@ -69,6 +69,7 @@
 
 #pragma mark UITableViewDataSource protocol
 
+// Header
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return [self headerView];
 }
@@ -77,8 +78,9 @@
     return [[self headerView] bounds].size.height;
 }
 
+//Sections
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 1;
 }
 
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
@@ -89,11 +91,11 @@
     return [[NSArray arrayWithObjects:@"Radios", @"Phones", @"Cartones", nil] objectAtIndex:section];
 }
 
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[PosessionStore.defaultStore posessions] count] / [self numberOfSectionsInTableView:tableView];
 }
 
+// Cells
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // Check for reusable cell from pull first
