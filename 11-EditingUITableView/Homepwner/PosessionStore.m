@@ -44,5 +44,9 @@ static PosessionStore *_defaultStore = nil;
     [self.posessions addObject:p];
     return p;
 }
+-(Posession *)removePosession:(Posession*)posession {
+    [self.posessions removeObjectIdenticalTo:posession];
+    return  posession;
+}
 
 @end

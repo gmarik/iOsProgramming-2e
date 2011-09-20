@@ -64,10 +64,21 @@
  -(IBAction)addNewPosession:(id)sender {
     [[PosessionStore defaultStore] createPosession];
     
-    [[self tableView] reloadData];
+    [[self tableView] reloadData];     
 }
 
 #pragma mark UITableViewDataSource protocol
+// Deletion
+-(void)      tableView:(UITableView *)tableView 
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+     forRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PosessionStore *ps = [PosessionStore defaultStore];
+        [ps removePosession:[ps.posessions objectAtIndex:[indexPath row]]];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    }
+}
 
 // Header
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

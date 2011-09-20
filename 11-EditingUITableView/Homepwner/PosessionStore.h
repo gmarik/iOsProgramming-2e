@@ -16,6 +16,7 @@
 @property (retain,atomic,strong) NSMutableArray* posessions;
 
 -(Posession *)createPosession;
+-(Posession *)removePosession:(Posession*)p;
 
 @end
 
