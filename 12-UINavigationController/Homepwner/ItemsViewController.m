@@ -26,7 +26,19 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
 
     if (self) {
-        for (int i = 0; i < 15; i++) {
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] 
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
+                                                     target:self 
+                                                     action:@selector(addNewPosession:)];
+        // Every UIViewController has navigationItem property pointing
+        // to UINavigationController instance
+        // property probably gets set when ViewController 
+        // gets connected with UINavigationController
+        [[self navigationItem] setRightBarButtonItem:bbi];
+        //[bbi release];
+        [[self navigationItem] setTitle:@"Homepwner"];
+
+        for (int i = 0; i < 3; i++) {
             [[PosessionStore defaultStore] createPosession];
         }
     }
