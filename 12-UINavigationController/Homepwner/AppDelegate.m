@@ -15,9 +15,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    ItemsViewController *c = [[ItemsViewController alloc] init];
     
-    [self.window setRootViewController:c];
+    ItemsViewController *itemsCtrlr = [[ItemsViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:itemsCtrlr];
+    [self.window setRootViewController:nav];
+    
+//    [c release];
+//    [nav release];
     
     return YES;
 }
