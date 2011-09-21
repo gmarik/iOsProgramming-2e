@@ -58,25 +58,8 @@
     return [self init];
 }
 
-#pragma mark headerView
 
--(UIView *)headerView {
-    if(!headerView) {
-        //Load NSBundle
-        //NOTE: owner set to self
-        //As I understand 
-        // 1) IB want's to know about File's Owner interface to be able connect object in Design TIme
-        // 2) in Run time File's Owner is set with owner:self that's why it's require  
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    return headerView;
-}
-
--(IBAction)toggleEditMode:(id)sender {
-    [sender setTitle:([self isEditing] ? @"Edit" : @"Done") forState:UIControlStateNormal];
-    [self setEditing:![self isEditing] animated:YES];
-}
-
+#pragma mark Model CRUD
  -(IBAction)addNewPosession:(id)sender {
     [[PosessionStore defaultStore] createPosession];
     
@@ -104,15 +87,6 @@
     [[PosessionStore defaultStore] 
         moveAtIndex:[sourceIndexPath row] 
             toIndex:[destinationIndexPath row]];
-}
-
-// Header
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [self headerView];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [[self headerView] bounds].size.height;
 }
 
 //Sections
