@@ -60,11 +60,26 @@
 
 
 #pragma mark Model CRUD
- -(IBAction)addNewPosession:(id)sender {
+-(IBAction)addNewPosession:(id)sender {
     [[PosessionStore defaultStore] createPosession];
     
     [[self tableView] reloadData];     
 }
+
+//UINavigationController
+-(void)           tableView:(UITableView *)tableView 
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ItemDetailsViewController *dc = [[ItemDetailsViewController alloc] init];
+
+    NSArray *all = [[PosessionStore defaultStore] posessions];
+    Posession *p = [all objectAtIndex:[indexPath row]];
+
+    [dc setPosession:p];
+    
+    [[self navigationController] pushViewController:dc animated:YES];
+    
+}
+
 
 #pragma mark UITableViewDataSource protocol
 // Deletion

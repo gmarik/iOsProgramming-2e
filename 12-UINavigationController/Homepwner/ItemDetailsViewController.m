@@ -13,6 +13,26 @@
 @synthesize serialField;
 @synthesize valueField;
 @synthesize dateLabel;
+@synthesize posession;
+
+
+// ViewCallbacks
+
+-(void)viewWillAppear:(BOOL)animated 
+{
+    [super viewWillAppear:animated];
+    [nameField setText:[posession posessionName]];
+    [serialField setText:[posession serialNumber]];
+
+    [valueField setText:[NSString stringWithFormat:@"%d", [posession valueInDollars]]];
+
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateStyle:NSDateFormatterMediumStyle];
+    [fmt setTimeStyle:NSDateFormatterNoStyle];
+    
+    [dateLabel setText:
+     [fmt stringFromDate:[posession dateCreated]]];
+}
 
 - (void)viewDidUnload {
 //    [setNameField release];
