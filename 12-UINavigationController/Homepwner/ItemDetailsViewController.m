@@ -34,6 +34,19 @@
      [fmt stringFromDate:[posession dateCreated]]];
 }
 
+-(void)viewWillDisappear:(BOOL)animated 
+{
+    [super viewWillDisappear:animated];
+    
+    // Clear first responder
+    [[self view] endEditing:YES];
+    
+    [posession setPosessionName:[nameField text]];
+    [posession setSerialNumber:[serialField text]];
+    [posession setValueInDollars:[[valueField text] intValue]];
+    
+}
+
 - (void)viewDidUnload {
 //    [setNameField release];
 //    [setSerialField release];
