@@ -14,6 +14,8 @@
 		62159E0B1422D35F001B858B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E0A1422D35F001B858B /* main.m */; };
 		62159E0F1422D35F001B858B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E0E1422D35F001B858B /* AppDelegate.m */; };
 		62159E211422D655001B858B /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E201422D655001B858B /* ItemsViewController.m */; };
+		62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */; };
+		62240BA4142AB1DA00AAC9AE /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */; };
 		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,9 @@
 		62159E0E1422D35F001B858B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		62159E1F1422D655001B858B /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		62159E201422D655001B858B /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		62240BA0142AB1DA00AAC9AE /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
+		62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsViewController.xib; sourceTree = "<group>"; };
 		6241E8F11422F8A60008C49F /* Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posession.h; sourceTree = "<group>"; };
 		6241E8F21422F8A60008C49F /* Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posession.m; sourceTree = "<group>"; };
 		6241E8F51422F9730008C49F /* PosessionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosessionStore.h; sourceTree = "<group>"; };
@@ -90,6 +95,9 @@
 				62159E1F1422D655001B858B /* ItemsViewController.h */,
 				62159E201422D655001B858B /* ItemsViewController.m */,
 				62159E051422D35F001B858B /* Supporting Files */,
+				62240BA0142AB1DA00AAC9AE /* ItemDetailsViewController.h */,
+				62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */,
+				62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62159E091422D35F001B858B /* InfoPlist.strings in Resources */,
+				62240BA4142AB1DA00AAC9AE /* ItemDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +180,7 @@
 				62159E211422D655001B858B /* ItemsViewController.m in Sources */,
 				6241E8F31422F8A60008C49F /* Posession.m in Sources */,
 				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
+				62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +250,7 @@
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -251,6 +262,7 @@
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
