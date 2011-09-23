@@ -9,11 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Posession.h"
 
+// TIP: 
+// Option-click on *.h file to open in assistant editor
+// ^-drag the view to the editor
+// name the property in the popup
+// it will auto-generate everything
+// PROFIT!!!
+
 @interface ItemDetailsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *serialField;
 @property (strong, nonatomic) IBOutlet UITextField *valueField;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property  (strong,nonatomic) Posession *posession;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

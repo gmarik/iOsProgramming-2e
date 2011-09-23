@@ -14,6 +14,7 @@
 @synthesize valueField;
 @synthesize dateLabel;
 @synthesize posession;
+@synthesize imageView;
 
 
 // ViewCallbacks
@@ -59,6 +60,7 @@
     [self setSerialField:nil];
     [self setValueField:nil];
     [self setDateLabel:nil];
+    [self setImageView:nil];
     [super viewDidUnload];
 }
 
