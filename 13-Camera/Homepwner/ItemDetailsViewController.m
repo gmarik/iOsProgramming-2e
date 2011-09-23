@@ -72,4 +72,8 @@
 //    [super dealloc];
 }
 
+// Image taking
+- (IBAction)takePicture:(id)sender {
+    
+}
 @end

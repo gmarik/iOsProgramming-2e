@@ -22,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *valueField;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property  (strong,nonatomic) Posession *posession;
+
+// Picture
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)takePicture:(id)sender;
 
 @end
