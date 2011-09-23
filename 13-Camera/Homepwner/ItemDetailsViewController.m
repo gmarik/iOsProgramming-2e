@@ -75,5 +75,19 @@
 // Image taking
 - (IBAction)takePicture:(id)sender {
     
+    // THIS doesn't work - TODO: understand why
+    //UIImagePickerController *imgPicker = [[UIImagePickerController alloc] initWithRootViewController:[self navigationController]];
+
+    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+  
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        imgPicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    
+    [imgPicker setDelegate:self];
+    [self presentModalViewController:imgPicker animated:YES];
+    
 }
 @end
