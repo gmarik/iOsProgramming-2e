@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *serialNumber;
 @property (strong, nonatomic) NSDate *dateCreated;
 @property (assign, nonatomic) int valueInDollars;
+@property (strong, nonatomic) NSString *imageKey;
 
 + (id)randomPosession;
 

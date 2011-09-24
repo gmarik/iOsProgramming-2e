@@ -14,7 +14,8 @@
 @synthesize posessionName, 
             serialNumber,
             dateCreated,
-            valueInDollars;
+            valueInDollars,
+            imageKey;
 
 + (id)randomPosession {
 
