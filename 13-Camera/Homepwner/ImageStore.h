@@ -10,4 +10,6 @@
 
 @interface ImageStore : NSObject 
 
++(ImageStore*)defaultStore;
+
 @end

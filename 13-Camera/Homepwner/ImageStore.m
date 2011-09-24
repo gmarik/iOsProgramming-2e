@@ -8,6 +8,20 @@
 
 #import "ImageStore.h"
 
+static ImageStore *defaultStore = nil;
+
 @implementation ImageStore
+
+
+
+// Singleton
++(ImageStore *)defaultStore 
+{
+    if (defaultStore) {
+        return defaultStore;
+    }
+    
+    return (defaultStore = [[self alloc] init]);
+}
 
 @end
