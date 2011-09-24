@@ -15,11 +15,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
     
     ItemsViewController *itemsCtrlr = [[ItemsViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:itemsCtrlr];
     [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
     
 //    [c release];
 //    [nav release];
