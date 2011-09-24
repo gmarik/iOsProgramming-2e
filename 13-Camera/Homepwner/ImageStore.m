@@ -12,6 +12,24 @@ static ImageStore *defaultStore = nil;
 
 @implementation ImageStore
 
+// ImageStore API
+
+-(void)setImage:(UIImage *)i 
+         forKey:(NSString *)s 
+{
+    [dict setObject:i forKey:s];
+}
+
+-(UIImage *)imageForKey:(NSString *)s 
+{
+    return [dict objectForKey:s];
+}
+
+-(void)deleteImageForKey:(NSString *)s 
+{
+    [dict removeObjectForKey:s];
+}
+
 
 // init
 - (id)init {

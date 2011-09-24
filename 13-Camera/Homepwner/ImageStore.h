@@ -9,7 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface ImageStore : NSObject 
+{
+    NSMutableDictionary *dict;
+}
 
 +(ImageStore*)defaultStore;
+
+-(void)setImage:(UIImage *)i forKey:(NSString *)s;
+-(UIImage *)imageForKey:(NSString *)s;
+-(void)deleteImageForKey:(NSString *)s;
 
 @end
