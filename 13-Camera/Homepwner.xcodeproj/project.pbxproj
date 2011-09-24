@@ -18,6 +18,7 @@
 		62240BA4142AB1DA00AAC9AE /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */; };
 		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
+		625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 625CECD7142E7F53002EDF31 /* ImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		6241E8F21422F8A60008C49F /* Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posession.m; sourceTree = "<group>"; };
 		6241E8F51422F9730008C49F /* PosessionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosessionStore.h; sourceTree = "<group>"; };
 		6241E8F61422F9730008C49F /* PosessionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosessionStore.m; sourceTree = "<group>"; };
+		625CECD6142E7F53002EDF31 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
+		625CECD7142E7F53002EDF31 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				6241E8F61422F9730008C49F /* PosessionStore.m */,
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
 				62159E0E1422D35F001B858B /* AppDelegate.m */,
+				625CECD6142E7F53002EDF31 /* ImageStore.h */,
+				625CECD7142E7F53002EDF31 /* ImageStore.m */,
 				62159E1F1422D655001B858B /* ItemsViewController.h */,
 				62159E201422D655001B858B /* ItemsViewController.m */,
 				62159E051422D35F001B858B /* Supporting Files */,
@@ -181,6 +186,7 @@
 				6241E8F31422F8A60008C49F /* Posession.m in Sources */,
 				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
 				62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */,
+				625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
