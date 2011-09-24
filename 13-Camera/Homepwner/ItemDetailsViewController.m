@@ -34,6 +34,8 @@
     
     [dateLabel setText:
      [fmt stringFromDate:[posession dateCreated]]];
+    
+    [imageView setImage:[[ImageStore defaultStore] imageForKey:posession.imageKey]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated 
