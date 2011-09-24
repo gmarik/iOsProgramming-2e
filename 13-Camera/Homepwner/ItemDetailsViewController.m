@@ -7,6 +7,7 @@
 //
 
 #import "ItemDetailsViewController.h"
+#import "ImageStore.h"
 
 @implementation ItemDetailsViewController
 @synthesize nameField;
@@ -97,6 +98,17 @@
     didFinishPickingMediaWithInfo:(NSDictionary *)info 
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+
+    NSString *oldKey = [posession imageKey];
+    if (oldKey) {
+        [[ImageStore defaultStore] deleteImageForKey:oldKey];
+    }
+    
+    CFUUIDRef _UUID = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef _UUIDString = CFUUIDCreateString(kCFAllocatorDefault, _UUID);
+    posession.imageKey = (__bridge_transfer NSString *)_UUIDString;
+    [[ImageStore defaultStore] setImage:image forKey:posession.imageKey];
+    
     [imageView setImage:image];
     [self dismissModalViewControllerAnimated:YES];
 }
