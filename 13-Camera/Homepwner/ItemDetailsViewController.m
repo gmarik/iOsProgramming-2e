@@ -72,7 +72,7 @@
 //    [super dealloc];
 }
 
-// Image taking
+// Image picker
 - (IBAction)takePicture:(id)sender {
     
     // THIS doesn't work - TODO: understand why
@@ -90,4 +90,15 @@
     [self presentModalViewController:imgPicker animated:YES];
     
 }
+
+// Image Picker callbacks
+
+-(void)     imagePickerController:(UIImagePickerController *)picker 
+    didFinishPickingMediaWithInfo:(NSDictionary *)info 
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [imageView setImage:image];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 @end
