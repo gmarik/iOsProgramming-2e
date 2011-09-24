@@ -15,9 +15,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     ItemsViewController *c = [[ItemsViewController alloc] init];
     
     [self.window setRootViewController:c];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
