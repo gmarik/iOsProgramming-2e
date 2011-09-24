@@ -13,6 +13,14 @@ static ImageStore *defaultStore = nil;
 @implementation ImageStore
 
 
+// init
+- (id)init {
+    self = [super init];
+    if (self) {
+        dict = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 // Singleton
 +(ImageStore *)defaultStore 
