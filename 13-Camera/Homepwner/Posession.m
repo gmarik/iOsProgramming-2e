@@ -11,6 +11,11 @@
 
 @implementation Posession
 
+@synthesize posessionName, 
+            serialNumber,
+            dateCreated,
+            valueInDollars;
+
 + (id)randomPosession {
 
     NSArray *adjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
@@ -62,38 +67,6 @@
     [self setDateCreated:[[NSDate alloc] init]];
     
     return self;
-}
-
-// Getters/Setters follow naming convention
-// setter: (void)setPropertyName
-// getter: propertyName
-
-- (NSString *)posessionName {
-    return posessionName;
-}
--(void)setPosessionName:(NSString *)newValue {
-    posessionName = newValue;
-}
-
-- (NSString *)serialNumber {
-    return serialNumber;
-}
-- (void)setSerialNumber:(NSString *)newValue {
-    serialNumber = newValue;
-}
-
-- (NSDate *)dateCreated {
-    return dateCreated;
-}
-- (void)setDateCreated:(NSDate *)newValue {
-    dateCreated = newValue;
-}
-
-- (int)valueInDollars {
-    return valueInDollars;
-}
-- (void)setValueInDollars:(int)newValue {
-    valueInDollars = newValue;
 }
 
 // Override Posession description

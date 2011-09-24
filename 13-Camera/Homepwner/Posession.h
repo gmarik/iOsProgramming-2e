@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Posession : NSObject {
-
-    NSString *posessionName;
-    NSString *serialNumber;
-    int valueInDollars;
-    NSDate *dateCreated;
-    
+@interface Posession : NSObject 
+{
 }
+
+@property (strong, nonatomic) NSString *posessionName;
+@property (strong, nonatomic) NSString *serialNumber;
+@property (strong, nonatomic) NSDate *dateCreated;
+@property (assign, nonatomic) int valueInDollars;
 
 + (id)randomPosession;
 
@@ -24,16 +24,5 @@
     valueInDollars:(int) value
        serialNumber:(NSString *)num;
 
--(NSString *)posessionName;
--(void)setPosessionName:(NSString *)newValue;
-
--(NSString *) serialNumber;
--(void)setSerialNumber:(NSString *)newValue;
-
--(NSDate *) dateCreated;
--(void)setDateCreated:(NSDate *)newValue;
-
--(int) valueInDollars;
--(void)setValueInDollars:(int)newValue;
 
 @end
