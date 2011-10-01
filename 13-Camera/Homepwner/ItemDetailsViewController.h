@@ -16,7 +16,7 @@
 // it will auto-generate everything
 // PROFIT!!!
 
-@interface ItemDetailsViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ItemDetailsViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *serialField;
 @property (strong, nonatomic) IBOutlet UITextField *valueField;

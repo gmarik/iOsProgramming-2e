@@ -67,6 +67,12 @@
     [super viewDidUnload];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"HERE");
+    [textField resignFirstResponder];
+    return YES;
+}
+
 -(void)dealloc {
 //    [setNameField relese];
 //    [setSerialField release];
