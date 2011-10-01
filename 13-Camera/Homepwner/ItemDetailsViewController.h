@@ -26,5 +26,6 @@
 // Picture
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePicture:(id)sender;
+- (IBAction)bgTapped:(id)sender;
 
 @end

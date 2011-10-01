@@ -73,6 +73,10 @@
     return YES;
 }
 
+-(IBAction)bgTapped:(id)sender {
+    [[self view] endEditing:YES];
+}
+
 -(void)dealloc {
 //    [setNameField relese];
 //    [setSerialField release];
