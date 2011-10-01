@@ -77,6 +77,11 @@
     [[self view] endEditing:YES];
 }
 
+- (IBAction)clearImage:(id)sender {
+    self.imageView.image = nil;
+    self.posession.imageKey = nil;
+}
+
 -(void)dealloc {
 //    [setNameField relese];
 //    [setSerialField release];
