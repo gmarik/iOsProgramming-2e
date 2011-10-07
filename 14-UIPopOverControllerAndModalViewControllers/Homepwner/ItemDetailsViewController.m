@@ -115,16 +115,27 @@
     //UIImagePickerController *imgPicker = [[UIImagePickerController alloc] initWithRootViewController:[self navigationController]];
 
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+    UIPopoverController *imagePickerPopover = nil;
   
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     } else {
-        imgPicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
     [imgPicker setDelegate:self];
-    [self presentModalViewController:imgPicker animated:YES];
     
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imgPicker];
+        imagePickerPopover.delegate = self;
+        [imagePickerPopover presentPopoverFromBarButtonItem:sender 
+                                   permittedArrowDirections:UIPopoverArrowDirectionAny 
+                                                   animated:YES];
+    } else {
+            [self presentModalViewController:imgPicker animated:YES];
+    }
+    
+//    [imgPicker release];
 }
 
 #pragma mark - Image Picker callbacks
