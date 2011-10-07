@@ -81,12 +81,15 @@
     [super viewDidUnload];
 }
 
+
+// UITextFieldDelegate 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"HERE");
     [textField resignFirstResponder];
     return YES;
 }
 
+// Actions
 -(IBAction)bgTapped:(id)sender {
     [[self view] endEditing:YES];
 }
