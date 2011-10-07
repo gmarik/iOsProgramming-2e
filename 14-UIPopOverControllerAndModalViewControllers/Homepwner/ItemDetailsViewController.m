@@ -18,7 +18,15 @@
 @synthesize imageView;
 
 
-// ViewCallbacks
+-(void)dealloc {
+    //    [setNameField relese];
+    //    [setSerialField release];
+    //    [setValueField release];
+    //    [setDateLabel release];
+    //    [super dealloc];
+}
+
+#pragma mark - View callbacks
 
 -(void)viewWillAppear:(BOOL)animated 
 {
@@ -82,14 +90,16 @@
 }
 
 
-// UITextFieldDelegate 
+#pragma mark - UITextFieldDelegate
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"HERE");
     [textField resignFirstResponder];
     return YES;
 }
 
-// Actions
+#pragma mark - Actions
+
 -(IBAction)bgTapped:(id)sender {
     [[self view] endEditing:YES];
 }
@@ -99,15 +109,6 @@
     self.posession.imageKey = nil;
 }
 
--(void)dealloc {
-//    [setNameField relese];
-//    [setSerialField release];
-//    [setValueField release];
-//    [setDateLabel release];
-//    [super dealloc];
-}
-
-// Image picker
 - (IBAction)takePicture:(id)sender {
     
     // THIS doesn't work - TODO: understand why
@@ -126,7 +127,7 @@
     
 }
 
-// Image Picker callbacks
+#pragma mark - Image Picker callbacks
 
 -(void)     imagePickerController:(UIImagePickerController *)picker 
     didFinishPickingMediaWithInfo:(NSDictionary *)info 
