@@ -114,6 +114,8 @@
     // THIS doesn't work - TODO: understand why
     //UIImagePickerController *imgPicker = [[UIImagePickerController alloc] initWithRootViewController:[self navigationController]];
 
+    if (imagePickerPopover) return;
+
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
   
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
