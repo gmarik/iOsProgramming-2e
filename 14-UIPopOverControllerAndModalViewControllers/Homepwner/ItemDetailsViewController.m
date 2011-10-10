@@ -161,7 +161,14 @@
     //CFRelease(_UUID); CFRelease(_UUIDString);
     
     [imageView setImage:image];
-    [self dismissModalViewControllerAnimated:YES];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        [imagePickerPopover dismissPopoverAnimated:YES];
+        // to allow animation to finish
+        //[imagePickerPopover autorelease];
+        imagePickerPopover = nil;
+    } else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - UIPopoverController
