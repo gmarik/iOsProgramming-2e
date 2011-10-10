@@ -133,7 +133,8 @@
                                    permittedArrowDirections:UIPopoverArrowDirectionAny 
                                                    animated:YES];
     } else {
-            [self presentModalViewController:imgPicker animated:YES];
+        // retains imgPicker
+        [self presentModalViewController:imgPicker animated:YES];
     }
     
 //    [imgPicker release];
@@ -161,6 +162,14 @@
     
     [imageView setImage:image];
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - UIPopoverController
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController 
+{
+    NSLog(@"user dismissed popover");
+    imagePickerPopover = nil;
 }
 
 @end
