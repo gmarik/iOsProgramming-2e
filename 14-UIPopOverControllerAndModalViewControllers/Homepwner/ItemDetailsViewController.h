@@ -17,11 +17,16 @@
 // PROFIT!!!
 
 @interface ItemDetailsViewController : UIViewController <UIPopoverControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    UIPopoverController *imagePickerPopover;
+}
+
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *serialField;
 @property (strong, nonatomic) IBOutlet UITextField *valueField;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property  (strong,nonatomic) Posession *posession;
+
 
 // Picture
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

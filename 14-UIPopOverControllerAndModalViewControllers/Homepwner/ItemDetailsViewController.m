@@ -115,7 +115,6 @@
     //UIImagePickerController *imgPicker = [[UIImagePickerController alloc] initWithRootViewController:[self navigationController]];
 
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
-    UIPopoverController *imagePickerPopover = nil;
   
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
