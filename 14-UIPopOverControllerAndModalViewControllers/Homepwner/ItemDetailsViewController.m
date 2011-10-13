@@ -8,6 +8,7 @@
 
 #import "ItemDetailsViewController.h"
 #import "ImageStore.h"
+#import "PosessionStore.h"
 
 @implementation ItemDetailsViewController
 @synthesize nameField;
@@ -134,6 +135,15 @@
 }
 
 #pragma mark - Actions
+
+-(IBAction)save:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(IBAction)cancel:(id)sender {
+    [[PosessionStore defaultStore] removePosession:self.posession];
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 -(IBAction)bgTapped:(id)sender {
     [[self view] endEditing:YES];

@@ -61,7 +61,17 @@
 
 #pragma mark Model CRUD
 -(IBAction)addNewPosession:(id)sender {
-    [[PosessionStore defaultStore] createPosession];
+    Posession *posession = [[PosessionStore defaultStore] createPosession];
+    
+    ItemDetailsViewController *detailsView = 
+        [[ItemDetailsViewController alloc] initForNewItem:YES];
+
+    detailsView.posession = posession;
+    
+    UINavigationController *navController = 
+        [[UINavigationController alloc] initWithRootViewController:detailsView];
+    
+    [self presentModalViewController:navController animated:YES];
     
     [[self tableView] reloadData];     
 }
