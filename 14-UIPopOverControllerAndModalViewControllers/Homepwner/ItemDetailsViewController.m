@@ -18,6 +18,41 @@
 @synthesize imageView;
 
 
+#pragma mark - designaed initializers
+
+-(id)initForNewItem:(BOOL)isNew {
+    self = [super initWithNibName:nil bundle:nil];
+    if (!self) return self;
+    
+    if (isNew) {
+        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] 
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+                                     target:self 
+                                     action:@selector(save:)];
+                
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] 
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                     target:self 
+                                     action:@selector(cancel:)];
+        
+        self.navigationItem.rightBarButtonItem = doneItem;
+        self.navigationItem.leftBarButtonItem = cancelItem;
+        
+        
+    }
+    
+    return self;
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:@"Wrong initializer" 
+                                   reason:@"Use initForNewItem:" 
+                                 userInfo:nil];
+    return nil;
+}
+
+#pragma mark - dealloc
+
 -(void)dealloc {
     //    [setNameField relese];
     //    [setSerialField release];
@@ -26,7 +61,7 @@
     //    [super dealloc];
 }
 
-#pragma mark - View callbacks
+#pragma mark - View callbacks/delegate methods
 
 -(void)viewWillAppear:(BOOL)animated 
 {

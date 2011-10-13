@@ -28,6 +28,9 @@
 @property  (strong,nonatomic) Posession *posession;
 
 
+// Designated initializer
+-(id)initForNewItem:(BOOL)isNew;
+
 // Picture
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePicture:(id)sender;

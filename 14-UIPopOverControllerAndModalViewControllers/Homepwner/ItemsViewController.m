@@ -68,8 +68,11 @@
 
 //UINavigationController
 -(void)           tableView:(UITableView *)tableView 
-    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ItemDetailsViewController *dc = [[ItemDetailsViewController alloc] init];
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    
+    ItemDetailsViewController *dc = 
+        [[ItemDetailsViewController alloc] initForNewItem:NO];
 
     NSArray *all = [[PosessionStore defaultStore] posessions];
     Posession *p = [all objectAtIndex:[indexPath row]];
