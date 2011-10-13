@@ -71,6 +71,8 @@
     UINavigationController *navController = 
         [[UINavigationController alloc] initWithRootViewController:detailsView];
     
+    [navController setModalPresentationStyle:UIModalPresentationFormSheet];
+    
     [self presentModalViewController:navController animated:YES];
     
     [[self tableView] reloadData];     
