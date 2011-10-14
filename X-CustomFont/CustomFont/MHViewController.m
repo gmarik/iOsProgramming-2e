@@ -21,7 +21,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+ 
+    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, 240, 40)];
+    [label1 setFont: [UIFont fontWithName: @"Terminus" size:24]];
+    [label1 setText:@"Terminus Font"];
+    [[self view] addSubview:label1]; 
+    
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 300, 40)];
+    [label2 setFont: [UIFont fontWithName: @"JUNEBUG" size:24]];
+    [label2 setText:@"Junebug Font"];
+    [[self view] addSubview:label2]; 
 }
 
 - (void)viewDidUnload

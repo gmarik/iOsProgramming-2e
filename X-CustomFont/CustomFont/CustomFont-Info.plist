@@ -36,5 +36,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JUNEBUG.ttf</string>
+		<string>Terminus.ttf</string>
+	</array>
 </dict>
 </plist>
