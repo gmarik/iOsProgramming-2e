@@ -16,7 +16,6 @@
 		629337A31448FB9700C2A949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 629337A21448FB9700C2A949 /* main.m */; };
 		629337A71448FB9700C2A949 /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 629337A61448FB9700C2A949 /* MHAppDelegate.m */; };
 		629337AA1448FB9700C2A949 /* MHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629337A91448FB9700C2A949 /* MHViewController.m */; };
-		629337AD1448FB9700C2A949 /* MHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629337AB1448FB9700C2A949 /* MHViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		629337A61448FB9700C2A949 /* MHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHAppDelegate.m; sourceTree = "<group>"; };
 		629337A81448FB9700C2A949 /* MHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHViewController.h; sourceTree = "<group>"; };
 		629337A91448FB9700C2A949 /* MHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHViewController.m; sourceTree = "<group>"; };
-		629337AC1448FB9700C2A949 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MHViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 				629337A61448FB9700C2A949 /* MHAppDelegate.m */,
 				629337A81448FB9700C2A949 /* MHViewController.h */,
 				629337A91448FB9700C2A949 /* MHViewController.m */,
-				629337AB1448FB9700C2A949 /* MHViewController.xib */,
 				6293379D1448FB9700C2A949 /* Supporting Files */,
 			);
 			path = CustomFont;
@@ -163,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				629337A11448FB9700C2A949 /* InfoPlist.strings in Resources */,
-				629337AD1448FB9700C2A949 /* MHViewController.xib in Resources */,
 				622FEFBC1448FE0C000C5E88 /* JUNEBUG.ttf in Resources */,
 				622FEFBD1448FE0C000C5E88 /* Terminus.ttf in Resources */,
 			);
@@ -191,14 +187,6 @@
 				629337A01448FB9700C2A949 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		629337AB1448FB9700C2A949 /* MHViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				629337AC1448FB9700C2A949 /* en */,
-			);
-			name = MHViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
