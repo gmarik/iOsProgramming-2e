@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		622FEFBC1448FE0C000C5E88 /* JUNEBUG_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622FEFBA1448FE0C000C5E88 /* JUNEBUG_.ttf */; };
+		622FEFBD1448FE0C000C5E88 /* Terminus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622FEFBB1448FE0C000C5E88 /* Terminus.ttf */; };
 		629337971448FB9700C2A949 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629337961448FB9700C2A949 /* UIKit.framework */; };
 		629337991448FB9700C2A949 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629337981448FB9700C2A949 /* Foundation.framework */; };
 		6293379B1448FB9700C2A949 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293379A1448FB9700C2A949 /* CoreGraphics.framework */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		622FEFBA1448FE0C000C5E88 /* JUNEBUG_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUNEBUG_.ttf; sourceTree = "<group>"; };
+		622FEFBB1448FE0C000C5E88 /* Terminus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Terminus.ttf; sourceTree = "<group>"; };
 		629337921448FB9700C2A949 /* CustomFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629337961448FB9700C2A949 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		629337981448FB9700C2A949 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		622FEFBF1448FE14000C5E88 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				622FEFBA1448FE0C000C5E88 /* JUNEBUG_.ttf */,
+				622FEFBB1448FE0C000C5E88 /* Terminus.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		629337871448FB9700C2A949 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		6293379D1448FB9700C2A949 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				622FEFBF1448FE14000C5E88 /* fonts */,
 				6293379E1448FB9700C2A949 /* CustomFont-Info.plist */,
 				6293379F1448FB9700C2A949 /* InfoPlist.strings */,
 				629337A21448FB9700C2A949 /* main.m */,
@@ -150,6 +164,8 @@
 			files = (
 				629337A11448FB9700C2A949 /* InfoPlist.strings in Resources */,
 				629337AD1448FB9700C2A949 /* MHViewController.xib in Resources */,
+				622FEFBC1448FE0C000C5E88 /* JUNEBUG_.ttf in Resources */,
+				622FEFBD1448FE0C000C5E88 /* Terminus.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +290,7 @@
 				629337B21448FB9700C2A949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
