@@ -73,6 +73,7 @@
         [[UINavigationController alloc] initWithRootViewController:detailsView];
     
     [navController setModalPresentationStyle:UIModalPresentationFormSheet];
+    [navController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     
     [self presentModalViewController:navController animated:YES];
     
