@@ -99,10 +99,10 @@
 				625CECD7142E7F53002EDF31 /* ImageStore.m */,
 				62159E1F1422D655001B858B /* ItemsViewController.h */,
 				62159E201422D655001B858B /* ItemsViewController.m */,
-				62159E051422D35F001B858B /* Supporting Files */,
 				62240BA0142AB1DA00AAC9AE /* ItemDetailsViewController.h */,
 				62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */,
 				62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */,
+				62159E051422D35F001B858B /* Supporting Files */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
