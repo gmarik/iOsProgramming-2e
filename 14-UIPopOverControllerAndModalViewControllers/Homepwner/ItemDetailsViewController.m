@@ -108,6 +108,14 @@
     [posession setSerialNumber:[serialField text]];
     [posession setValueInDollars:[[valueField text] intValue]];
     
+}
+
+// book suggests call delegate method inside save/cancel
+// but I decided to override this method and stick delegate call there
+-(void)dismissModalViewControllerAnimated:(BOOL)animated {
+    
+    [super dismissModalViewControllerAnimated:animated];
+    
     // ItemDetailsViewControllerDelegate
     if([self.delegate respondsToSelector:@selector(itemDetailsViewControllerWillDissmiss:)]) {
         [self.delegate itemDetailsViewControllerWillDissmiss:self];
