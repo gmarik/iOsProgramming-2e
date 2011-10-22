@@ -17,6 +17,7 @@
 @synthesize dateLabel;
 @synthesize posession;
 @synthesize imageView;
+@synthesize delegate;
 
 
 #pragma mark - designaed initializers
@@ -107,6 +108,10 @@
     [posession setSerialNumber:[serialField text]];
     [posession setValueInDollars:[[valueField text] intValue]];
     
+    // ItemDetailsViewControllerDelegate
+    if([self.delegate respondsToSelector:@selector(itemDetailsViewControllerWillDissmiss:)]) {
+        [self.delegate itemDetailsViewControllerWillDissmiss:self];
+    }
 }
 
 - (void)viewDidUnload {

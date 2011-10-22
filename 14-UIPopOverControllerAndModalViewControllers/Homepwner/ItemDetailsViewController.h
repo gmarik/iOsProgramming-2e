@@ -16,6 +16,16 @@
 // it will auto-generate everything
 // PROFIT!!!
 
+@class ItemDetailsViewController;
+
+
+// provide protocol in order to notify parent controller
+// which instantiates this onw
+@protocol ItemDetailsViewControllerDelegate <NSObject>
+@optional
+-(void)itemDetailsViewControllerWillDissmiss:(ItemDetailsViewController*)vc;
+@end
+
 @interface ItemDetailsViewController : UIViewController <UIPopoverControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     UIPopoverController *imagePickerPopover;
@@ -26,6 +36,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *valueField;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property  (strong,nonatomic) Posession *posession;
+@property  (assign, nonatomic) id <ItemDetailsViewControllerDelegate> delegate;
 
 
 // Designated initializer
