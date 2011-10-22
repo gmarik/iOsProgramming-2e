@@ -66,6 +66,7 @@
     ItemDetailsViewController *detailsView = 
         [[ItemDetailsViewController alloc] initForNewItem:YES];
 
+    detailsView.delegate = self; // ItemDetailsViewControllerDelegate
     detailsView.posession = posession;
     
     UINavigationController *navController = 
@@ -99,6 +100,11 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
+// ItemDetailsViewControllerDelegate
+-(void)itemDetailsViewControllerWillDissmiss:(ItemDetailsViewController *)vc {
     [[self tableView] reloadData];
 }
 

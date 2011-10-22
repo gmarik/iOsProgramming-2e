@@ -11,7 +11,7 @@
 
 
 // set proper super-class
-@interface ItemsViewController : UITableViewController
+@interface ItemsViewController : UITableViewController <ItemDetailsViewControllerDelegate>
 {
 
 }
