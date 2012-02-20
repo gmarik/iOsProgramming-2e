@@ -79,4 +79,10 @@ static PosessionStore *_defaultStore = nil;
     NSString *docDir = [docs objectAtIndex:0];
     return [docDir stringByAppendingPathComponent:filename];
 }
+
+#pragma mark Archiving
+-(BOOL)saveChanges {
+    return [NSKeyedArchiver archiveRootObject:posessions toFile:self.posessionArchivePath];
+}
+
 @end

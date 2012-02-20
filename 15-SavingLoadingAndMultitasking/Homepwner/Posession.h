@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Posession : NSObject 
+@interface Posession : NSObject <NSCoding>
 {
 }
 
