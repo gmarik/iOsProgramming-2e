@@ -68,4 +68,15 @@ static PosessionStore *_defaultStore = nil;
     // as adding object to an array retains it
     // [p release];
 }
+
+-(NSString *)posessionArchivePath {
+    
+    return [self pathInDocumentDirectory:@"posessions.data"];
+}
+
+-(NSString *)pathInDocumentDirectory:(NSString *)filename {
+    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [docs objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:filename];
+}
 @end

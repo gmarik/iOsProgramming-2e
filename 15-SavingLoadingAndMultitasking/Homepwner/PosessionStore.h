@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Posession.h"
 
+
 @interface PosessionStore : NSObject
 
 +(PosessionStore *)defaultStore;
@@ -18,6 +19,9 @@
 -(Posession *)createPosession;
 -(Posession *)removePosession:(Posession*)p;
 -(void)moveAtIndex:(int)from toIndex:(int)to;
+-(NSString *)posessionArchivePath;
+-(NSString *)pathInDocumentDirectory:(NSString *)filename;
+
 
 @end
 
