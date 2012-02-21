@@ -215,7 +215,7 @@
     posession.imageKey = (__bridge_transfer NSString *)_UUIDString;
     [[ImageStore defaultStore] setImage:image forKey:posession.imageKey];
     
-    CFRelease(_UUID); CFRelease(_UUIDString);
+    //CFRelease(_UUID); CFRelease(_UUIDString);
     
     [imageView setImage:image];
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
