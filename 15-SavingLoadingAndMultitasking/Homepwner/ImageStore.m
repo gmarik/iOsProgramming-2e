@@ -8,6 +8,12 @@
 
 #import "ImageStore.h"
 
+NSString *pathInDocumentDirectory(NSString *filename) {
+    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [docs objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:filename];
+}
+
 static ImageStore *defaultStore = nil;
 
 @implementation ImageStore
