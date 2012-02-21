@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "ImageStore.h"
 #import "PosessionStore.h"
 
 @implementation PosessionStore
@@ -47,6 +48,9 @@ static PosessionStore *_defaultStore = nil;
 
 -(Posession *)removePosession:(Posession*)posession {
     [self.posessions removeObjectIdenticalTo:posession];
+    
+    [ImageStore.defaultStore deleteImageForKey:posession.imageKey];
+    
     return  posession;
 }
 
