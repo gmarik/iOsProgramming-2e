@@ -42,9 +42,9 @@
         // which is a button with default target:self action:toggleEditing mode
         [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
 
-        for (int i = 0; i < 3; i++) {
-            [[PosessionStore defaultStore] createPosession];
-        }
+//        for (int i = 0; i < 3; i++) {
+//            [[PosessionStore defaultStore] createPosession];
+//        }
     }
 
     return self;
