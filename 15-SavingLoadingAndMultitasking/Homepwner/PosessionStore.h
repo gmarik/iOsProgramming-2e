@@ -14,14 +14,17 @@
 
 +(PosessionStore *)defaultStore;
 
-@property (retain,atomic,strong) NSMutableArray* posessions;
+@property (retain,nonatomic,strong) NSMutableArray* posessions;
 
 -(Posession *)createPosession;
 -(Posession *)removePosession:(Posession*)p;
--(BOOL)saveChanges;
+
 -(void)moveAtIndex:(int)from toIndex:(int)to;
 -(NSString *)posessionArchivePath;
 -(NSString *)pathInDocumentDirectory:(NSString *)filename;
+
+-(BOOL)saveChanges;
+-(void)loadChanges;
 
 
 @end

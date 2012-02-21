@@ -25,5 +25,6 @@
     valueInDollars:(int) value
        serialNumber:(NSString *)num;
 
+- (Posession *)decodeWithCoder:(NSCoder *)aDecoder;
 
 @end

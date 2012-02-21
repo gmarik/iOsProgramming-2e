@@ -10,7 +10,7 @@
 
 @implementation PosessionStore
 
-@synthesize posessions;
+@synthesize posessions = _posessions;
 
 #pragma mark 
 
@@ -26,12 +26,12 @@ static PosessionStore *_defaultStore = nil;
     return _defaultStore;
 }
 
-#pragma mark constructor
+#pragma mark construcGGtor
 
 - (id)init {
     self = [super init];
     if (self) {
-        self.posessions = [[NSMutableArray alloc] init];
+        _posessions = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -82,7 +82,26 @@ static PosessionStore *_defaultStore = nil;
 
 #pragma mark Archiving
 -(BOOL)saveChanges {
-    return [NSKeyedArchiver archiveRootObject:posessions toFile:self.posessionArchivePath];
+    return [NSKeyedArchiver archiveRootObject:self.posessions toFile:self.posessionArchivePath];
+}
+
+-(void)loadChanges {
+    if (!_posessions) {
+        NSString *path = [self posessionArchivePath];
+        _posessions = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    }
+    
+    if (!_posessions) {
+        _posessions = [[NSMutableArray alloc] init];
+    }
+}
+
+#pragma mark Posessions
+
+-(NSArray *) posessions {
+    [self loadChanges];
+    
+    return _posessions;
 }
 
 @end
