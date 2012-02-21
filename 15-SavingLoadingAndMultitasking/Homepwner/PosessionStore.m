@@ -26,12 +26,12 @@ static PosessionStore *_defaultStore = nil;
     return _defaultStore;
 }
 
-#pragma mark construcGGtor
+#pragma mark constructor
 
 - (id)init {
     self = [super init];
     if (self) {
-        _posessions = [[NSMutableArray alloc] init];
+        [self loadChanges];
     }
     return self;
 }
@@ -44,6 +44,7 @@ static PosessionStore *_defaultStore = nil;
     [self.posessions addObject:p];
     return p;
 }
+
 -(Posession *)removePosession:(Posession*)posession {
     [self.posessions removeObjectIdenticalTo:posession];
     return  posession;
@@ -95,13 +96,4 @@ static PosessionStore *_defaultStore = nil;
         _posessions = [[NSMutableArray alloc] init];
     }
 }
-
-#pragma mark Posessions
-
--(NSArray *) posessions {
-    [self loadChanges];
-    
-    return _posessions;
-}
-
 @end
