@@ -52,6 +52,11 @@ static ImageStore *defaultStore = nil;
     [NSFileManager.defaultManager removeItemAtPath:path error:NULL];
 }
 
+-(void)clearCache {
+    NSLog(@"[ImageStore] clearCache");
+    [dict removeAllObjects];
+}
+
 
 // init
 - (id)init {

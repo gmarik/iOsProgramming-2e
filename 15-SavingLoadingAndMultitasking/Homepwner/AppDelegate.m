@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ItemsViewController.h"
 #import "PosessionStore.h"
+#import "ImageStore.h"
 
 @implementation AppDelegate
 
@@ -37,6 +38,11 @@
 -(void)applicationWillTerminate:(UIApplication *)application {
     // if iOS < 4
 //    [self applicationDidEnterBackground:application];
+}
+
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    NSLog(@"Received mem warning");
+    [ImageStore.defaultStore clearCache];
 }
 
 @end
