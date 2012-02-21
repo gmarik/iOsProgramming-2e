@@ -24,16 +24,32 @@ static ImageStore *defaultStore = nil;
          forKey:(NSString *)s 
 {
     [dict setObject:i forKey:s];
+    
+    //persist image
+    NSString *imagePath = pathInDocumentDirectory(s);
+    NSData *d = UIImagePNGRepresentation(i);
+    [d writeToFile:imagePath atomically:YES];
 }
 
 -(UIImage *)imageForKey:(NSString *)s 
 {
-    return [dict objectForKey:s];
+    UIImage *image = [dict objectForKey:s];
+    
+    if (!image) {
+        image = [UIImage imageWithContentsOfFile:pathInDocumentDirectory(s)];
+        if (image) { // otherwise exceptions
+            [dict setObject:image forKey:s];
+        }
+    }
+    return image;
 }
 
 -(void)deleteImageForKey:(NSString *)s 
 {
     [dict removeObjectForKey:s];
+    
+    NSString *path = pathInDocumentDirectory(s);
+    [NSFileManager.defaultManager removeItemAtPath:path error:NULL];
 }
 
 
