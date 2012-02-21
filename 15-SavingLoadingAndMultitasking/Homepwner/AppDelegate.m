@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ItemsViewController.h"
+#import "PosessionStore.h"
 
 @implementation AppDelegate
 
@@ -26,6 +27,16 @@
     //    [c release];
     //    [nav release];    
     return YES;
+}
+
+-(void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"Archiving posessions");
+    [PosessionStore.defaultStore saveChanges];
+}
+
+-(void)applicationWillTerminate:(UIApplication *)application {
+    // if iOS < 4
+//    [self applicationDidEnterBackground:application];
 }
 
 @end
