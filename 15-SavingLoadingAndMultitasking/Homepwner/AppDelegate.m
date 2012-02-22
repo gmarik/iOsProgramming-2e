@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ItemsViewController *itemsCtrlr = [[ItemsViewController alloc] init];
@@ -31,7 +33,7 @@
 }
 
 -(void)applicationDidEnterBackground:(UIApplication *)application {
-    NSLog(@"Archiving posessions");
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     [PosessionStore.defaultStore saveChanges];
 }
 
@@ -41,8 +43,20 @@
 }
 
 -(void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    NSLog(@"Received mem warning");
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     [ImageStore.defaultStore clearCache];
+}
+
+-(void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+-(void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+-(void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end
