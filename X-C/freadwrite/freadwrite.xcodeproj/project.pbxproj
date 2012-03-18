@@ -1,0 +1,210 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		629FB4E515155F3B0003902F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 629FB4E415155F3B0003902F /* main.c */; };
+		629FB4E715155F3B0003902F /* freadwrite.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 629FB4E615155F3B0003902F /* freadwrite.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		629FB4DE15155F3B0003902F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				629FB4E715155F3B0003902F /* freadwrite.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		629FB4E015155F3B0003902F /* freadwrite */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = freadwrite; sourceTree = BUILT_PRODUCTS_DIR; };
+		629FB4E415155F3B0003902F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		629FB4E615155F3B0003902F /* freadwrite.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = freadwrite.1; sourceTree = "<group>"; };
+		629FB4ED151560B00003902F /* infile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = infile.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		629FB4DD15155F3B0003902F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		629FB4D515155F3B0003902F = {
+			isa = PBXGroup;
+			children = (
+				629FB4E315155F3B0003902F /* freadwrite */,
+				629FB4E115155F3B0003902F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		629FB4E115155F3B0003902F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				629FB4E015155F3B0003902F /* freadwrite */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		629FB4E315155F3B0003902F /* freadwrite */ = {
+			isa = PBXGroup;
+			children = (
+				629FB4E415155F3B0003902F /* main.c */,
+				629FB4E615155F3B0003902F /* freadwrite.1 */,
+				629FB4ED151560B00003902F /* infile.txt */,
+			);
+			path = freadwrite;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		629FB4DF15155F3B0003902F /* freadwrite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629FB4EA15155F3B0003902F /* Build configuration list for PBXNativeTarget "freadwrite" */;
+			buildPhases = (
+				629FB4DC15155F3B0003902F /* Sources */,
+				629FB4DD15155F3B0003902F /* Frameworks */,
+				629FB4DE15155F3B0003902F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = freadwrite;
+			productName = freadwrite;
+			productReference = 629FB4E015155F3B0003902F /* freadwrite */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		629FB4D715155F3B0003902F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 629FB4DA15155F3B0003902F /* Build configuration list for PBXProject "freadwrite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 629FB4D515155F3B0003902F;
+			productRefGroup = 629FB4E115155F3B0003902F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				629FB4DF15155F3B0003902F /* freadwrite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		629FB4DC15155F3B0003902F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629FB4E515155F3B0003902F /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		629FB4E815155F3B0003902F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		629FB4E915155F3B0003902F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		629FB4EB15155F3B0003902F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		629FB4EC15155F3B0003902F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		629FB4DA15155F3B0003902F /* Build configuration list for PBXProject "freadwrite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629FB4E815155F3B0003902F /* Debug */,
+				629FB4E915155F3B0003902F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629FB4EA15155F3B0003902F /* Build configuration list for PBXNativeTarget "freadwrite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629FB4EB15155F3B0003902F /* Debug */,
+				629FB4EC15155F3B0003902F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 629FB4D715155F3B0003902F /* Project object */;
+}
