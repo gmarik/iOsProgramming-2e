@@ -33,4 +33,16 @@ void serialize_demo() {
     NSDictionary *dic2 = [[NSDictionary alloc] initWithContentsOfFile:@"./data"]; 
     
     NSLog(@"%@", dic2);
+    
+    /*
+    // Writes/Reads serialized NSDictionary to a property list file
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+	<key>Hey</key>
+	<string>Hey</string>
+    </dict>
+    </plist>
+    */
 }
