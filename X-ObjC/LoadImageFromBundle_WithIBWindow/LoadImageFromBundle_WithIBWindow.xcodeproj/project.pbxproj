@@ -14,6 +14,7 @@
 		62F437FA1517FE71004A3A03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F437F91517FE71004A3A03 /* main.m */; };
 		62F437FE1517FE71004A3A03 /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F437FD1517FE71004A3A03 /* MHAppDelegate.m */; };
 		62F438051517FF2E004A3A03 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62F438041517FF2E004A3A03 /* Window.xib */; };
+		62F438071518028D004A3A03 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F438061518028D004A3A03 /* img.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		62F437FC1517FE71004A3A03 /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
 		62F437FD1517FE71004A3A03 /* MHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHAppDelegate.m; sourceTree = "<group>"; };
 		62F438041517FF2E004A3A03 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		62F438061518028D004A3A03 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img.png; path = LoadImageFromBundle_WithIBWindow/img.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		62F437DE1517FE70004A3A03 = {
 			isa = PBXGroup;
 			children = (
+				62F4380815180296004A3A03 /* Images */,
 				62F437F31517FE71004A3A03 /* LoadImageFromBundle_WithIBWindow */,
 				62F437EC1517FE71004A3A03 /* Frameworks */,
 				62F437EA1517FE71004A3A03 /* Products */,
@@ -91,6 +94,14 @@
 				62F437FB1517FE71004A3A03 /* LoadImageFromBundle_WithIBWindow-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62F4380815180296004A3A03 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				62F438061518028D004A3A03 /* img.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			files = (
 				62F437F81517FE71004A3A03 /* InfoPlist.strings in Resources */,
 				62F438051517FF2E004A3A03 /* Window.xib in Resources */,
+				62F438071518028D004A3A03 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +273,7 @@
 				62F438031517FE71004A3A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

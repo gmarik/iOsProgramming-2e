@@ -11,5 +11,6 @@
 @interface MHAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
+@property (strong, nonatomic) IBOutlet UIImageView *imgView;
 
 @end

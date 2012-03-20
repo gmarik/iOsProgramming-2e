@@ -10,7 +10,8 @@
 
 @implementation MHAppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, 
+           imgView = _imgView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,6 +21,8 @@
     // 4) decorate MHAppDelegate window property with IBOutled
     // 5) remove programmatically created window assignment
     // 6) Connect App Delegate's window property with UIWindow in IB
+    // 7) Connect File Owners's delegate with App Delegate
+    // 8) Set Main Interface to Window in Summary Tab
     // 7) DONE!
     // http://www.trappers.tk/site/2011/06/16/mainwindow-xib/    
     
@@ -28,6 +31,16 @@
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor whiteColor];
+    
+    NSBundle *b = [NSBundle mainBundle];
+    
+    NSString *imgPath = [b pathForResource:@"img" ofType:@"png"];
+    UIImage *img = [[UIImage alloc] initWithContentsOfFile:imgPath];
+    
+    self.imgView.image = img;
+    
+    NSLog(@"%@", self.window.subviews);
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
