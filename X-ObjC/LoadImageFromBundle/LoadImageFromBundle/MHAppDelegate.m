@@ -15,6 +15,7 @@
 
 // HOWDOI
 // 1) i think I forgot how to associate window created in IB with appDelegate's window
+//    A: see LoadImageFromBundle_withIBWindow project
 // 2) how do I scroll image?
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
