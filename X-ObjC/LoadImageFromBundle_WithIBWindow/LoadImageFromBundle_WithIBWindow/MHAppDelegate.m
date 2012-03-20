@@ -14,9 +14,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // 1) Set Custom Class of File's Owner to UIApplication
+    // 2) Drop Object from UI library in IB
+    // 3) Set Object's Custom Class to MHAppDelegate (so it becomes App Delegate)
+    // 4) decorate MHAppDelegate window property with IBOutled
+    // 5) remove programmatically created window assignment
+    // 6) Connect App Delegate's window property with UIWindow in IB
+    // 7) DONE!
+    // http://www.trappers.tk/site/2011/06/16/mainwindow-xib/    
+    
+    // UIWindow gets loaded from Window.xib
+    //
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
