@@ -13,6 +13,8 @@
 		62F238AE151E91A800297FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62F238AC151E91A800297FD3 /* InfoPlist.strings */; };
 		62F238B0151E91A800297FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F238AF151E91A800297FD3 /* main.m */; };
 		62F238B4151E91A800297FD3 /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F238B3151E91A800297FD3 /* MHAppDelegate.m */; };
+		62F238BC151E925700297FD3 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F238BB151E925700297FD3 /* View.m */; };
+		62F238BF151E92EC00297FD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F238BE151E92EC00297FD3 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		62F238B1151E91A800297FD3 /* GesturesDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GesturesDemo-Prefix.pch"; sourceTree = "<group>"; };
 		62F238B2151E91A800297FD3 /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
 		62F238B3151E91A800297FD3 /* MHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHAppDelegate.m; sourceTree = "<group>"; };
+		62F238BA151E925700297FD3 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		62F238BB151E925700297FD3 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		62F238BD151E92EC00297FD3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		62F238BE151E92EC00297FD3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			children = (
 				62F238B2151E91A800297FD3 /* MHAppDelegate.h */,
 				62F238B3151E91A800297FD3 /* MHAppDelegate.m */,
+				62F238BA151E925700297FD3 /* View.h */,
+				62F238BB151E925700297FD3 /* View.m */,
+				62F238BD151E92EC00297FD3 /* ViewController.h */,
+				62F238BE151E92EC00297FD3 /* ViewController.m */,
 				62F238AA151E91A800297FD3 /* Supporting Files */,
 			);
 			path = GesturesDemo;
@@ -154,6 +164,8 @@
 			files = (
 				62F238B0151E91A800297FD3 /* main.m in Sources */,
 				62F238B4151E91A800297FD3 /* MHAppDelegate.m in Sources */,
+				62F238BC151E925700297FD3 /* View.m in Sources */,
+				62F238BF151E92EC00297FD3 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
