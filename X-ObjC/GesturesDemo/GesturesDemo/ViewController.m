@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "View.h"
+#import "RectView.h"
 
 
 @implementation ViewController
@@ -21,15 +21,15 @@
     return self;
 }
 
--(void)loadView {
-    self.view = [[View alloc] initWithFrame:CGRectZero];
-    [self.view setBackgroundColor:UIColor.whiteColor];
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // it's required to have a base view before using any other
+    // otherwise the one gets stretched to fill whole window
+    // that's why View.xib got added
+    // so this one could be used as intented with desired dimension
+    [self.view addSubview:[[RectView alloc] init]];
 
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] init];
     [pinch addTarget:self action:@selector(onPinch:)];
@@ -61,7 +61,9 @@
 
 - (void)onPinch:(UIPinchGestureRecognizer *)sender {
 
-    self.view.transform = CGAffineTransformScale(self.view.transform, sender.scale, sender.scale);
+    UIView *v = sender.view;
+    
+    v.transform = CGAffineTransformScale(v.transform, sender.scale, sender.scale);
     // THIS IS IMPORTANT
     // otherwise it scales with geometrical progression
     sender.scale = 1;
@@ -78,16 +80,22 @@
 
 - (void)onRotate:(UIRotationGestureRecognizer *)recognizer {
     
-    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
+    UIView *v = [self.view.subviews objectAtIndex:0];
+    
+    v.transform = CGAffineTransformRotate(v.transform, recognizer.rotation);
     recognizer.rotation = 0;
 }
 
 - (IBAction)onPan:(UIPanGestureRecognizer *)recognizer {
     NSLog(@"Pan");
     
-    CGPoint translation = [recognizer translationInView:self.view];
-    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, 
-                                         recognizer.view.center.y + translation.y);
-    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+    UIView *v = [self.view.subviews objectAtIndex:0];
+    UIView *source = self.view;
+    
+    // Important to note where self.view and v are used
+    CGPoint translation = [recognizer translationInView:source];
+    v.center = CGPointMake(v.center.x + translation.x, 
+                           v.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:source];
 }
 @end
