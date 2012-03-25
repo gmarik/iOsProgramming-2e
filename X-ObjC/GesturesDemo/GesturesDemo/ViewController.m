@@ -9,9 +9,6 @@
 #import "ViewController.h"
 #import "View.h"
 
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 
@@ -28,20 +25,26 @@
     self.view = [[View alloc] initWithFrame:CGRectZero];
     [self.view setBackgroundColor:UIColor.whiteColor];
     
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] init];
     [pinch addTarget:self action:@selector(onPinch:)];
     [self.view addGestureRecognizer:pinch];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] init];
     [pan addTarget:self action:@selector(onPan:)];
-    
     [self.view addGestureRecognizer:pan];
+    
+    UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] init];
+    [rotate addTarget:self action:@selector(onRotate:)];
+    [self.view addGestureRecognizer:rotate];
+    
+    currentImageFrame = self.view.frame;
 
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
@@ -55,6 +58,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark Gesture Recognizers
 
 - (void)onPinch:(UIPinchGestureRecognizer *)sender {
 
@@ -73,18 +78,18 @@
     
 }
 
-- (IBAction)onPan:(UIPanGestureRecognizer *)sender {
+- (void)onRotate:(UIRotationGestureRecognizer *)recognizer {
+    
+    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
+    recognizer.rotation = 0;
+}
+
+- (IBAction)onPan:(UIPanGestureRecognizer *)recognizer {
     NSLog(@"Pan");
-/* 
-    CGPoint translate = [sender translationInView:self.view];
     
-    CGRect newFrame = currentImageFrame;
-    newFrame.origin.x += translate.x;
-    newFrame.origin.y += translate.y;
-    sender.view.frame = newFrame;
-    
-    if (sender.state == UIGestureRecognizerStateEnded)
-        currentImageFrame = newFrame;
- */
+    CGPoint translation = [recognizer translationInView:self.view];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, 
+                                         recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
 }
 @end
