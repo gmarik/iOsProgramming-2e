@@ -59,18 +59,18 @@
 
 #pragma mark Gesture Recognizers
 
-- (void)onPinch:(UIPinchGestureRecognizer *)sender {
+- (void)onPinch:(UIPinchGestureRecognizer *)recognizer {
 
-    UIView *v = sender.view;
+    UIView *v = [self.view.subviews objectAtIndex:0];
     
-    v.transform = CGAffineTransformScale(v.transform, sender.scale, sender.scale);
+    v.transform = CGAffineTransformScale(v.transform, recognizer.scale, recognizer.scale);
     // THIS IS IMPORTANT
     // otherwise it scales with geometrical progression
-    sender.scale = 1;
+    recognizer.scale = 1;
     
-    if (sender.state == UIGestureRecognizerStateEnded) {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
         NSLog(@"Pinch Ended");
-    } else if (sender.state == UIGestureRecognizerStateBegan) {
+    } else if (recognizer.state == UIGestureRecognizerStateBegan) {
         NSLog(@"Pinch Started");
     } else {
         NSLog(@"Pinched");
