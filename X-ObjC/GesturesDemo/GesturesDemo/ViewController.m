@@ -42,8 +42,6 @@
     UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] init];
     [rotate addTarget:self action:@selector(onRotate:)];
     [self.view addGestureRecognizer:rotate];
-    
-    currentImageFrame = self.view.frame;
 
 	// Do any additional setup after loading the view.
 }
