@@ -17,6 +17,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.view.backgroundColor = [UIColor greenColor];
     }
     return self;
 }
@@ -29,7 +30,8 @@
     // otherwise the one gets stretched to fill whole window
     // that's why View.xib got added
     // so this one could be used as intented with desired dimension
-    [self.view addSubview:[[RectView alloc] init]];
+    [self.view addSubview:[[RectView alloc] initWithFrame:self.view.frame]];
+    
 
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] init];
     [pinch addTarget:self action:@selector(onPinch:)];

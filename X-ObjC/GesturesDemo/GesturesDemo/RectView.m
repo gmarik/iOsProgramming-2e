@@ -10,12 +10,14 @@
 
 @implementation RectView
 
-- (id)init
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:CGRectMake(20, 20, 150, 150)];
+    self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.alpha = 0.4;
+//        self.backgroundColor = [UIColor redColor];
+//        self.alpha = 0.4;
+        self.opaque = NO;
     }
     return self;
 }
@@ -27,7 +29,8 @@
   
  CGContextRef context = UIGraphicsGetCurrentContext();
  CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor); 
- CGContextFillRect(context, rect);
+ CGContextFillRect(context, self.bounds);
+ CGContextClearRect(context, CGRectMake(100, 100, 100, 100));
     
 }
 
