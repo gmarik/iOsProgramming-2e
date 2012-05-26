@@ -24,12 +24,21 @@
         CGSize newSize = CGSizeMake(300, 600);
         UIGraphicsBeginImageContext( newSize );
         
+        
         // Use existing opacity as is
         [bottomImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
         // Apply supplied opacity
         [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height) blendMode:kCGBlendModeNormal alpha:0.5];
         
+        
+        // Draw text
+        [[UIColor blackColor] set];
+        [[NSString stringWithString:@"Test"] drawAtPoint:CGPointMake(100, 100) withFont:[UIFont boldSystemFontOfSize:20]];
+        
+        
         _mergedImage = UIGraphicsGetImageFromCurrentImageContext();
+
+        
         
         UIGraphicsEndImageContext();
         
