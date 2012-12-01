@@ -215,6 +215,8 @@
     posession.imageKey = (__bridge_transfer NSString *)_UUIDString;
     [[ImageStore defaultStore] setImage:image forKey:posession.imageKey];
     
+    [posession setThumbnailDataFromImage:image];
+    
     //CFRelease(_UUID); CFRelease(_UUIDString);
     
     [imageView setImage:image];

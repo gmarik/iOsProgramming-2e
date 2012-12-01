@@ -19,6 +19,7 @@
 		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
 		625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 625CECD7142E7F53002EDF31 /* ImageStore.m */; };
+		62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		6241E8F61422F9730008C49F /* PosessionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosessionStore.m; sourceTree = "<group>"; };
 		625CECD6142E7F53002EDF31 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
 		625CECD7142E7F53002EDF31 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
+		62B922E3166A7B7800354FBD /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
+		62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */,
 				62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */,
 				62159E051422D35F001B858B /* Supporting Files */,
+				62B922E3166A7B7800354FBD /* HomepwnerItemCell.h */,
+				62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
 				62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */,
 				625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */,
+				62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

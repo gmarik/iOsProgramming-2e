@@ -15,7 +15,9 @@
             serialNumber,
             dateCreated,
             valueInDollars,
-            imageKey;
+            imageKey,
+            thumbnail,
+            thumbnailData;
 
 + (id)randomPosession {
 
@@ -94,6 +96,8 @@
     [aCoder encodeObject:imageKey forKey:@"imageKey"];
     
     [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+    
+    [aCoder encodeObject:thumbnailData forKey: @"thumbnailData"];
 }
 
 - (Posession *)decodeWithCoder:(NSCoder *)aDecoder {
@@ -103,8 +107,63 @@
     [self setImageKey:[aDecoder decodeObjectForKey:@"imageKey"]];
     
     [self setValueInDollars:[aDecoder decodeIntForKey:@"valueInDollars"]];
+    [self setThumbnailData:[aDecoder decodeObjectForKey:@"thumbnailData"]];
 
     return self;
+}
+
++ (CGSize)thumnailSize {
+    return CGSizeMake(40, 40);
+}
+
+- (UIImage *)thumbnail {
+    if (!thumbnailData) {
+        return nil;
+    }
+    
+    if (!thumbnail) {
+        thumbnail = [UIImage imageWithData:thumbnailData];
+        
+    }
+    return thumbnail;
+}
+
+- (void)setThumbnailDataFromImage:(UIImage *)image {
+    CGSize origImageSize = [image size];
+    
+    CGRect newRect;
+    newRect.origin = CGPointZero;
+    newRect.size  = CGSizeMake(40, 40);
+    
+    // how do we scale
+    float ratio = MAX(newRect.size.width/origImageSize.width, newRect.size.height/origImageSize.height);
+    
+    UIGraphicsBeginImageContext(newRect.size);
+    
+    //Round the corners
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect cornerRadius:5.0];
+    
+    [path addClip];
+    
+    //into whant rectangle shall I compsite the image?
+    
+    CGRect projectRect;
+    projectRect.size.width = ratio * origImageSize.width;
+    projectRect.size.height = ratio * origImageSize.height;
+    projectRect.origin.x = (newRect.size.width - projectRect.size.width) / 2.0;
+    projectRect.origin.y = (newRect.size.height - projectRect.size.height) / 2.0;
+    
+    [image drawInRect:projectRect];
+    
+    UIImage *small = UIGraphicsGetImageFromCurrentImageContext();
+    [self setThumbnail:small];
+    
+    //
+    NSData *data = UIImagePNGRepresentation(small);
+    [self setThumbnailData:data];
+    
+    UIGraphicsEndImageContext();
+
 }
 
 @end

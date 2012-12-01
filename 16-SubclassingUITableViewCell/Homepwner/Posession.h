@@ -18,6 +18,10 @@
 @property (strong, nonatomic) NSDate *dateCreated;
 @property (assign, nonatomic) int valueInDollars;
 @property (strong, nonatomic) NSString *imageKey;
+@property (strong, nonatomic) UIImage *thumbnail;
+@property (strong, nonatomic) NSData *thumbnailData;
+
++(CGSize)thumnailSize;
 
 + (id)randomPosession;
 
@@ -26,5 +30,7 @@
        serialNumber:(NSString *)num;
 
 - (Posession *)decodeWithCoder:(NSCoder *)aDecoder;
+- (void)setThumbnailDataFromImage:(UIImage *) image;
+
 
 @end

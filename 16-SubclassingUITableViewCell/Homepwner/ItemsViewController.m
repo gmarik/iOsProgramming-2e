@@ -8,6 +8,7 @@
 
 #import "ItemsViewController.h"
 #import "PosessionStore.h"
+#import "HomepwnerItemCell.h"
 
 // I was wondering where is the view for this controller
 // Turns out that UITableViewController gets view automatically
@@ -154,22 +155,22 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // Check for reusable cell from pull first
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    
+    HomepwnerItemCell *cell = (HomepwnerItemCell *)[tableView
+        dequeueReusableCellWithIdentifier:@"HomepwnerItemCell"];
     
     if (!cell) { // otherwise create
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                  reuseIdentifier:@"UITableViewCell"];
+        cell = [[HomepwnerItemCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                  reuseIdentifier:@"HomepwnerItemCell"];
     }
+    
     // 5 is number of rows in section
     int idx = [indexPath section] * 5 + [indexPath row];
     
     Posession *p = [[[PosessionStore defaultStore] posessions] objectAtIndex:idx];
     
-    NSString *s = [NSString stringWithFormat:@"%d", idx];
-    
-    [[cell textLabel] setText:[p description]];
-    [[cell detailTextLabel] setText:s];  
+    //[[cell textLabel] setText:[p description]];
+    //[[cell detailTextLabel] setText:s];
+    [cell setPosession:p];
     
     return cell;
 }
