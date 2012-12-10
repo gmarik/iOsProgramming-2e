@@ -4,7 +4,7 @@
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="posessions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Posession" inverseName="assetType" inverseEntity="Posession" syncable="YES"/>
     </entity>
-    <entity name="Posession" syncable="YES">
+    <entity name="Posession" representedClassName="Posession" syncable="YES">
         <attribute name="dataCreated" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="imageKey" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderingValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>

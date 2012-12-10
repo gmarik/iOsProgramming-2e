@@ -16,7 +16,7 @@
 		62159E211422D655001B858B /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62159E201422D655001B858B /* ItemsViewController.m */; };
 		62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */; };
 		62240BA4142AB1DA00AAC9AE /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */; };
-		6241E8F31422F8A60008C49F /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* Posession.m */; };
+		6241E8F31422F8A60008C49F /* _Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F21422F8A60008C49F /* _Posession.m */; };
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
 		625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 625CECD7142E7F53002EDF31 /* ImageStore.m */; };
 		62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */; };
@@ -40,8 +40,8 @@
 		62240BA0142AB1DA00AAC9AE /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
 		62240BA1142AB1DA00AAC9AE /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
 		62240BA2142AB1DA00AAC9AE /* ItemDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsViewController.xib; sourceTree = "<group>"; };
-		6241E8F11422F8A60008C49F /* Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posession.h; sourceTree = "<group>"; };
-		6241E8F21422F8A60008C49F /* Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posession.m; sourceTree = "<group>"; };
+		6241E8F11422F8A60008C49F /* _Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Posession.h; sourceTree = "<group>"; };
+		6241E8F21422F8A60008C49F /* _Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Posession.m; sourceTree = "<group>"; };
 		6241E8F51422F9730008C49F /* PosessionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosessionStore.h; sourceTree = "<group>"; };
 		6241E8F61422F9730008C49F /* PosessionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosessionStore.m; sourceTree = "<group>"; };
 		625CECD6142E7F53002EDF31 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 		62159E041422D35F001B858B /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				6241E8F11422F8A60008C49F /* Posession.h */,
-				6241E8F21422F8A60008C49F /* Posession.m */,
+				6241E8F11422F8A60008C49F /* _Posession.h */,
+				6241E8F21422F8A60008C49F /* _Posession.m */,
 				6241E8F51422F9730008C49F /* PosessionStore.h */,
 				6241E8F61422F9730008C49F /* PosessionStore.m */,
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
@@ -195,7 +195,7 @@
 				62159E0B1422D35F001B858B /* main.m in Sources */,
 				62159E0F1422D35F001B858B /* AppDelegate.m in Sources */,
 				62159E211422D655001B858B /* ItemsViewController.m in Sources */,
-				6241E8F31422F8A60008C49F /* Posession.m in Sources */,
+				6241E8F31422F8A60008C49F /* _Posession.m in Sources */,
 				6241E8F71422F9730008C49F /* PosessionStore.m in Sources */,
 				62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */,
 				625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */,
