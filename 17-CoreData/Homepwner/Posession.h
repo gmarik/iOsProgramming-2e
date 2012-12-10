@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSDate * dataCreated;
 @property (nonatomic, retain) NSString * imageKey;
 @property (nonatomic, retain) NSData * thumbnailData;
-@property (nonatomic, retain) UNKNOWN_TYPE thumbnail;
+@property (nonatomic, retain) UIImage * thumbnail;
 @property (nonatomic, retain) NSNumber * orderingValue;
 @property (nonatomic, retain) NSManagedObject *assetType;
 
