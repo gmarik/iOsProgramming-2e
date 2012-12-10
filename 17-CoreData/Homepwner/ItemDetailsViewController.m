@@ -78,7 +78,7 @@
     [fmt setTimeStyle:NSDateFormatterNoStyle];
     
     [dateLabel setText:
-     [fmt stringFromDate:[posession dateCreated]]];
+     [fmt stringFromDate:[posession dataCreated]]];
     
     [imageView setImage:[[ImageStore defaultStore] imageForKey:posession.imageKey]];
 }
@@ -106,7 +106,7 @@
     
     [posession setPosessionName:[nameField text]];
     [posession setSerialNumber:[serialField text]];
-    [posession setValueInDollars:[[valueField text] intValue]];
+    [posession setValueInDollars:[NSNumber numberWithFloat:[[valueField text] floatValue]]];
     
 }
 
