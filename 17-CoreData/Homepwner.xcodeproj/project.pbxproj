@@ -21,6 +21,7 @@
 		625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 625CECD7142E7F53002EDF31 /* ImageStore.m */; };
 		62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */; };
 		9B11125116760C4C00394D96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11125016760C4C00394D96 /* CoreData.framework */; };
+		9B11125516760D0C00394D96 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B11125316760D0C00394D96 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		62B922E3166A7B7800354FBD /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
 		62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
 		9B11125016760C4C00394D96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9B11125416760D0C00394D96 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		62159E051422D35F001B858B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B11125316760D0C00394D96 /* Model.xcdatamodeld */,
 				62159E061422D35F001B858B /* Homepwner-Info.plist */,
 				62159E071422D35F001B858B /* InfoPlist.strings */,
 				62159E0A1422D35F001B858B /* main.m */,
@@ -197,6 +200,7 @@
 				62240BA3142AB1DA00AAC9AE /* ItemDetailsViewController.m in Sources */,
 				625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */,
 				62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */,
+				9B11125516760D0C00394D96 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B11125316760D0C00394D96 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B11125416760D0C00394D96 /* Model.xcdatamodel */,
+			);
+			currentVersion = 9B11125416760D0C00394D96 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 62159DF11422D35F001B858B /* Project object */;
 }
