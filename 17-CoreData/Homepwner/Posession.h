@@ -22,4 +22,9 @@
 @property (nonatomic, retain) NSNumber * orderingValue;
 @property (nonatomic, retain) NSManagedObject *assetType;
 
+
++ (id)randomPosession;
++(CGSize)thumnailSize;
+- (void)setThumbnailDataFromImage:(UIImage *) image;
+
 @end
