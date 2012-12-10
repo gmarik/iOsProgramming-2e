@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AssetType" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posessions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Posession" inverseName="assetType" inverseEntity="Posession" syncable="YES"/>
+    </entity>
     <entity name="Posession" syncable="YES">
         <attribute name="dataCreated" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="imageKey" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,8 +13,10 @@
         <attribute name="thumbnail" optional="YES" transient="YES" syncable="YES"/>
         <attribute name="thumbnailData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="valueInDollars" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="assetType" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AssetType" inverseName="posessions" inverseEntity="AssetType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Posession" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Posession" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="AssetType" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>
