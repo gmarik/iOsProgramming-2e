@@ -20,4 +20,6 @@
 -(void)deleteImageForKey:(NSString *)s;
 -(void)clearCache;
 
+
+
 @end

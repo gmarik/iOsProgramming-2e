@@ -69,7 +69,7 @@
 
 - (void) setPosession: (Posession *) posession
 {
-    [valueLabel setText:[NSString stringWithFormat:@"$%d", posession.valueInDollars]];
+    [valueLabel setText:[NSString stringWithFormat:@"$%d", [posession.valueInDollars intValue]]];
     [nameLabel setText:posession.posessionName];
     [imageView setImage: posession.thumbnail];
 

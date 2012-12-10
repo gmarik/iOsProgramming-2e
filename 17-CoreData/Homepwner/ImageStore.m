@@ -8,11 +8,6 @@
 
 #import "ImageStore.h"
 
-NSString *pathInDocumentDirectory(NSString *filename) {
-    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDir = [docs objectAtIndex:0];
-    return [docDir stringByAppendingPathComponent:filename];
-}
 
 static ImageStore *defaultStore = nil;
 
@@ -26,7 +21,7 @@ static ImageStore *defaultStore = nil;
     [dict setObject:i forKey:s];
     
     //persist image
-    NSString *imagePath = pathInDocumentDirectory(s);
+    NSString *imagePath = pathInDocumentDirectory1(s);
     NSData *d = UIImagePNGRepresentation(i);
     [d writeToFile:imagePath atomically:YES];
 }
@@ -36,7 +31,7 @@ static ImageStore *defaultStore = nil;
     UIImage *image = [dict objectForKey:s];
     
     if (!image) {
-        image = [UIImage imageWithContentsOfFile:pathInDocumentDirectory(s)];
+        image = [UIImage imageWithContentsOfFile:pathInDocumentDirectory1(s)];
         if (image) { // otherwise exceptions
             [dict setObject:image forKey:s];
         }
@@ -44,12 +39,14 @@ static ImageStore *defaultStore = nil;
     return image;
 }
 
--(void)deleteImageForKey:(NSString *)s 
+-(void)deleteImageForKey:(NSString *)s
 {
-    [dict removeObjectForKey:s];
+    if (s) {
+        [dict removeObjectForKey:s];
     
-    NSString *path = pathInDocumentDirectory(s);
-    [NSFileManager.defaultManager removeItemAtPath:path error:NULL];
+        NSString *path = pathInDocumentDirectory1(s);
+        [NSFileManager.defaultManager removeItemAtPath:path error:NULL];
+    }
 }
 
 -(void)clearCache {
@@ -76,5 +73,13 @@ static ImageStore *defaultStore = nil;
     
     return (defaultStore = [[self alloc] init]);
 }
+
+// TODO: this is a stupid duplicate 
+NSString *pathInDocumentDirectory1(NSString *filename) {
+    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [docs objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:filename];
+}
+
 
 @end

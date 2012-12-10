@@ -129,9 +129,9 @@
    moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath 
           toIndexPath:(NSIndexPath *)destinationIndexPath 
 {
-    [[PosessionStore defaultStore] 
-        moveAtIndex:[sourceIndexPath row] 
-            toIndex:[destinationIndexPath row]];
+//    [[PosessionStore defaultStore]
+//        moveAtIndex:[sourceIndexPath row] 
+//            toIndex:[destinationIndexPath row]];
 }
 
 //Sections

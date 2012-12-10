@@ -9,9 +9,10 @@
 #import "ImageStore.h"
 #import "PosessionStore.h"
 
+
 @implementation PosessionStore
 
-@synthesize posessions = _posessions;
+//@synthesize posessions = _posessions;
 
 #pragma mark 
 
@@ -31,27 +32,73 @@ static PosessionStore *_defaultStore = nil;
 
 - (id)init {
     self = [super init];
-    if (self) {
-        [self loadChanges];
+    
+    //Read model
+    
+    model = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    
+    NSString *path = pathInDocumentDirectory(@"store.data");
+    NSURL *storeURL = [NSURL fileURLWithPath:path];
+    
+    NSError *error = nil;
+    if (![psc addPersistentStoreWithType:NSSQLiteStoreType
+                           configuration:nil
+                                     URL:storeURL
+                                 options:nil
+                                   error:&error]) {
+        
+        [NSException raise:@"Open failed"
+                    format:@"Reason: %@", [error localizedDescription]];
+        
     }
+    
+    // Create the managed object context
+    
+    context = [[NSManagedObjectContext alloc] init];
+    [context setPersistentStoreCoordinator:psc];
+    
+    [context setUndoManager:nil];
+    
     return self;
 }
 
 
 #pragma mark Posessions manipulation
 
+-(NSArray *)posessions {
+    [self fetchPosessionsIfNecessary];
+    return _posessions;
+}
+
 -(Posession *)createPosession {
-    Posession *p = [Posession randomPosession];
-    [self.posessions addObject:p];
+    
+    double order;
+    if ([_posessions count] == 0) {
+        order = 1.0;
+    } else {
+        Posession *p =[_posessions lastObject];
+        order = [p.orderingValue doubleValue] + 1.0;
+    }
+    
+    NSLog(@"Adding after %d items, order = %.2f", [_posessions count], order);
+    
+    Posession *p = [NSEntityDescription insertNewObjectForEntityForName:@"Posession" inManagedObjectContext:context];
+    
+    [p setOrderingValue: [NSNumber numberWithDouble:order]];
+    
+    [_posessions addObject:p];
+    
     return p;
 }
 
--(Posession *)removePosession:(Posession*)posession {
-    [self.posessions removeObjectIdenticalTo:posession];
+-(void)removePosession:(Posession*)p {
+    NSString *key = [p imageKey];
     
-    [ImageStore.defaultStore deleteImageForKey:posession.imageKey];
-    
-    return  posession;
+    [[ImageStore defaultStore] deleteImageForKey:key];
+    [context deleteObject:p];
+    [_posessions removeObjectIdenticalTo:p];
 }
 
 -(void)moveAtIndex:(int)from 
@@ -66,8 +113,8 @@ static PosessionStore *_defaultStore = nil;
     // as array object removal decrements retain count
     //[p retain]
     
-    [self.posessions removeObjectAtIndex:from];
-    [self.posessions insertObject:p atIndex:to];
+    [_posessions removeObjectAtIndex:from];
+    [_posessions insertObject:p atIndex:to];
     
     //We should have released `p` 
     // as adding object to an array retains it
@@ -76,18 +123,40 @@ static PosessionStore *_defaultStore = nil;
 
 -(NSString *)posessionArchivePath {
     
-    return [self pathInDocumentDirectory:@"posessions.data"];
-}
-
--(NSString *)pathInDocumentDirectory:(NSString *)filename {
-    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDir = [docs objectAtIndex:0];
-    return [docDir stringByAppendingPathComponent:filename];
+    return pathInDocumentDirectory(@"posessions.data");
 }
 
 #pragma mark Archiving
+
+- (void)fetchPosessionsIfNecessary {
+    if (!_posessions) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *e = [[model entitiesByName] objectForKey:@"Posession"];
+        [request setEntity:e];
+        
+        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"orderingValue"
+                                                             ascending:YES];
+        
+        [request setSortDescriptors:[NSArray arrayWithObject:sd]];
+        
+        NSError *error;
+        NSArray *result = [context executeFetchRequest:request error:&error];
+        if (!result ) {
+            [NSException raise:@"Fetch Failed" format:@"Reason: %@", [error localizedDescription]];
+        }
+        
+        _posessions = [[NSMutableArray alloc] initWithArray:result];
+    }
+}
+
 -(BOOL)saveChanges {
-    return [NSKeyedArchiver archiveRootObject:self.posessions toFile:self.posessionArchivePath];
+    NSError *err = nil;
+    BOOL successful = [context save:&err];
+    if (!successful) {
+        NSLog(@"Error saving: %@", [err localizedDescription]);
+    }
+    return successful;
 }
 
 -(void)loadChanges {
@@ -100,4 +169,11 @@ static PosessionStore *_defaultStore = nil;
         _posessions = [[NSMutableArray alloc] init];
     }
 }
+
+NSString *pathInDocumentDirectory(NSString *filename) {
+    NSArray *docs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [docs objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:filename];
+}
+
 @end

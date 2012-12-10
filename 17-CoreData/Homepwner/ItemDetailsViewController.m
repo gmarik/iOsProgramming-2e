@@ -71,7 +71,7 @@
     [nameField setText:[posession posessionName]];
     [serialField setText:[posession serialNumber]];
 
-    [valueField setText:[NSString stringWithFormat:@"%d", [posession valueInDollars]]];
+    [valueField setText:[NSString stringWithFormat:@"%@", [posession valueInDollars]]];
 
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     [fmt setDateStyle:NSDateFormatterMediumStyle];
