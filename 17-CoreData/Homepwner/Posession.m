@@ -21,35 +21,35 @@
 @dynamic orderingValue;
 @dynamic assetType;
 
-+ (id)randomPosession {
-    
-    NSArray *adjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
-    NSArray *nounList = [NSArray arrayWithObjects:@"Bear", @"Spork", @"Mac", nil];
-    
-    long adjIdx = rand() % [adjectiveList count];
-    long nounIdx = rand() % [nounList count];
-    
-    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
-                            [adjectiveList objectAtIndex:adjIdx],
-                            [nounList objectAtIndex:nounIdx]];
-    
-    int randomValue = rand() % 100;
-    
-    NSString *randomSerial = [NSString stringWithFormat:@"%c%c%c%c%c",
-                              'O' + rand() % 10,
-                              'A' + rand() % 26,
-                              'O' + rand() % 10,
-                              'A' + rand() % 26,
-                              'O' + rand() % 10];
-    
-    // self here is a class
-    Posession *p = [[self alloc] initWithName:randomName
-                               valueInDollars:randomValue
-                                 serialNumber:randomSerial];
-    
-    return p;
-    
-}
+//+ (id)randomPosession {
+//    
+//    NSArray *adjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
+//    NSArray *nounList = [NSArray arrayWithObjects:@"Bear", @"Spork", @"Mac", nil];
+//    
+//    long adjIdx = rand() % [adjectiveList count];
+//    long nounIdx = rand() % [nounList count];
+//    
+//    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
+//                            [adjectiveList objectAtIndex:adjIdx],
+//                            [nounList objectAtIndex:nounIdx]];
+//    
+//    int randomValue = rand() % 100;
+//    
+//    NSString *randomSerial = [NSString stringWithFormat:@"%c%c%c%c%c",
+//                              'O' + rand() % 10,
+//                              'A' + rand() % 26,
+//                              'O' + rand() % 10,
+//                              'A' + rand() % 26,
+//                              'O' + rand() % 10];
+//    
+//    // self here is a class
+//    Posession *p = [[self alloc] initWithName:randomName
+//                               valueInDollars:randomValue
+//                                 serialNumber:randomSerial];
+//    
+//    return p;
+//    
+//}
 
 + (CGSize)thumnailSize {
     return CGSizeMake(40, 40);
@@ -92,6 +92,14 @@
     
     UIGraphicsEndImageContext();
     
+}
+
+- (void)awakeFromFetch
+{
+    [super awakeFromFetch];
+    
+    UIImage *tn =[UIImage imageWithData:[self thumbnailData]];
+    [self setPrimitiveValue:tn forKey:@"thumnail"];
 }
 
 @end

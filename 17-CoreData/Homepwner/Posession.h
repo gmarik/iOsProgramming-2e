@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSNumber * valueInDollars;
 @property (nonatomic, retain) NSDate * dataCreated;
 @property (nonatomic, retain) NSString * imageKey;
+// TODO: rename this
 @property (nonatomic, retain) NSData * thumbnailData;
 @property (nonatomic, retain) UIImage * thumbnail;
 @property (nonatomic, retain) NSNumber * orderingValue;
