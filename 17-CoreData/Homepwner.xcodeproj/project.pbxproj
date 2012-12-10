@@ -20,6 +20,7 @@
 		6241E8F71422F9730008C49F /* PosessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6241E8F61422F9730008C49F /* PosessionStore.m */; };
 		625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 625CECD7142E7F53002EDF31 /* ImageStore.m */; };
 		62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */; };
+		9B11125116760C4C00394D96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11125016760C4C00394D96 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		625CECD7142E7F53002EDF31 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
 		62B922E3166A7B7800354FBD /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
 		62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
+		9B11125016760C4C00394D96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B11125116760C4C00394D96 /* CoreData.framework in Frameworks */,
 				62159DFF1422D35F001B858B /* UIKit.framework in Frameworks */,
 				62159E011422D35F001B858B /* Foundation.framework in Frameworks */,
 				62159E031422D35F001B858B /* CoreGraphics.framework in Frameworks */,
@@ -65,6 +68,7 @@
 		62159DEF1422D35F001B858B = {
 			isa = PBXGroup;
 			children = (
+				9B11125016760C4C00394D96 /* CoreData.framework */,
 				62159E041422D35F001B858B /* Homepwner */,
 				62159DFD1422D35F001B858B /* Frameworks */,
 				62159DFB1422D35F001B858B /* Products */,
