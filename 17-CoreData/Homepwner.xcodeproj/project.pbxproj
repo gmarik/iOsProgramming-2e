@@ -22,6 +22,7 @@
 		62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */; };
 		9B11125116760C4C00394D96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11125016760C4C00394D96 /* CoreData.framework */; };
 		9B11125516760D0C00394D96 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B11125316760D0C00394D96 /* Model.xcdatamodeld */; };
+		9B1112581676172900394D96 /* Posession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1112571676172900394D96 /* Posession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		62B922E4166A7B7800354FBD /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
 		9B11125016760C4C00394D96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9B11125416760D0C00394D96 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		9B1112561676172900394D96 /* Posession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posession.h; sourceTree = "<group>"; };
+		9B1112571676172900394D96 /* Posession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				6241E8F11422F8A60008C49F /* _Posession.h */,
 				6241E8F21422F8A60008C49F /* _Posession.m */,
+				9B1112561676172900394D96 /* Posession.h */,
+				9B1112571676172900394D96 /* Posession.m */,
 				6241E8F51422F9730008C49F /* PosessionStore.h */,
 				6241E8F61422F9730008C49F /* PosessionStore.m */,
 				62159E0D1422D35F001B858B /* AppDelegate.h */,
@@ -201,6 +206,7 @@
 				625CECD8142E7F53002EDF31 /* ImageStore.m in Sources */,
 				62B922E5166A7B7800354FBD /* HomepwnerItemCell.m in Sources */,
 				9B11125516760D0C00394D96 /* Model.xcdatamodeld in Sources */,
+				9B1112581676172900394D96 /* Posession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
