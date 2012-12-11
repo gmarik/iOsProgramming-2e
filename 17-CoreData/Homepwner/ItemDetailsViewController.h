@@ -31,6 +31,8 @@
     UIPopoverController *imagePickerPopover;
 }
 
+@property (weak, nonatomic) IBOutlet UIButton *clearImgButton;
+
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *serialField;
 @property (strong, nonatomic) IBOutlet UITextField *valueField;

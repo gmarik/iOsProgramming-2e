@@ -77,6 +77,8 @@
     [fmt setDateStyle:NSDateFormatterMediumStyle];
     [fmt setTimeStyle:NSDateFormatterNoStyle];
     
+    [self.clearImgButton setHidden:[posession imageKey] ? NO : YES];
+    
     [dateLabel setText:
      [fmt stringFromDate:[posession dataCreated]]];
     
@@ -93,7 +95,7 @@
         clr = [UIColor groupTableViewBackgroundColor];
     }
 
-    [[self view] setBackgroundColor:clr];
+//    [[self view] setBackgroundColor:clr];
 }
 
 
@@ -135,6 +137,7 @@
     [self setValueField:nil];
     [self setDateLabel:nil];
     [self setImageView:nil];
+    [self setClearImgButton:nil];
     [super viewDidUnload];
 }
 
@@ -165,6 +168,7 @@
 - (IBAction)clearImage:(id)sender {
     self.imageView.image = nil;
     self.posession.imageKey = nil;
+    [self.clearImgButton setHidden: YES];
 }
 
 - (IBAction)takePicture:(id)sender {
