@@ -45,7 +45,7 @@
 //-(Posession *)createPosession;
 //-(Posession *)removePosession:(Posession*)p;
 //
-//-(void)moveAtIndex:(int)from toIndex:(int)to;
+-(void)moveAtIndex:(int)from toIndex:(int)to;
 
 
 #pragma mark AssetTypes
