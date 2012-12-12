@@ -165,6 +165,10 @@ static PosessionStore *_defaultStore = nil;
             [NSException raise:@"Fetch Failed" format:@"Reason: %@", [error localizedDescription]];
         }
         
+        for (int i=0; i < result.count; i++) {
+            NSLog(@"%.2f", [[[result objectAtIndex:i] orderingValue] doubleValue]);
+        }
+        
         _posessions = [[NSMutableArray alloc] initWithArray:result];
     }
 }
