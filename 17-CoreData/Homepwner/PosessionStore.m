@@ -74,13 +74,7 @@ static PosessionStore *_defaultStore = nil;
 
 -(Posession *)createPosession {
     
-    double order;
-    if ([_posessions count] == 0) {
-        order = 1.0;
-    } else {
-        Posession *p =[_posessions lastObject];
-        order = [p.orderingValue doubleValue] + 1.0;
-    }
+    double order = [self orderingValue:_posessions];
     
     NSLog(@"Adding after %d items, order = %.2f", [_posessions count], order);
     
@@ -101,6 +95,31 @@ static PosessionStore *_defaultStore = nil;
     [_posessions removeObjectIdenticalTo:p];
 }
 
+
+-(double)orderingValue: (NSArray *)orderedItems {
+    return ([[[orderedItems lastObject] orderingValue] doubleValue] || 0) + 1;
+}
+
+-(double)orderingValue:(NSArray *) orderedItems to:(int) to from:(int) from {
+    double nextbound = 0;
+    double to_bound = [[[orderedItems objectAtIndex:to] orderingValue] doubleValue];
+    
+    if (to == 0) {
+        nextbound = 0;
+    } else if (to == orderedItems.count - 1) {
+        nextbound = orderedItems.count + 1;
+    } else {
+        int nextIdx = to - (to < from ? 1 : -1);
+        nextbound = [[[orderedItems objectAtIndex:  nextIdx] orderingValue] doubleValue];
+    }
+    
+    double ov = (to_bound + nextbound) / 2.0;
+    
+    NSLog(@"Ordering value: [%d => %d] %.2f", from, to, ov);
+    
+    return ov;
+}
+
 -(void)moveAtIndex:(int)from 
            toIndex:(int)to 
 {
@@ -109,12 +128,12 @@ static PosessionStore *_defaultStore = nil;
     }
     
     Posession *p = [self.posessions objectAtIndex:from];
-    // We should have retained `p` if we had no ARC
-    // as array object removal decrements retain count
-    //[p retain]
+    p.orderingValue = [NSNumber numberWithDouble: [self orderingValue:_posessions to:to from:from]];
     
     [_posessions removeObjectAtIndex:from];
-    [_posessions insertObject:p atIndex:to];
+    [_posessions insertObject:p
+                      atIndex:to];
+    
     
     //We should have released `p` 
     // as adding object to an array retains it
